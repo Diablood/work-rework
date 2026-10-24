@@ -416,3 +416,11 @@ Suite au « on continue » utilisateur, paquet final vérifié par check-project
 ### Validation utilisateur finale 1.0.0 — 24 octobre 2026
 
 Réponses explicites au formulaire interactif : RimSort affiche bien 1.0.0 — Oui, validé ; démarrage sans erreur liée à Work Rework — Oui, validé ; en partie, onglet Travail, priorités, dépliages et groupes — Oui, validé. Ces trois contrôles sont rapportés par l'utilisateur, pas exécutés par l'agent. Version finale acceptée pour l'étape de publication. Couverture et textes déjà acceptés, sans référence publique GitHub. Aucun upload Steam effectué ; visibilité et autorisation d'envoi restent à définir.
+
+### Création Workshop privée et identité persistée
+
+Envoi initial réalisé par l'utilisateur, identifiant fourni dans l'URL et confirmé dans le PublishedFileId.txt installé : 3826051737. Identifiant ajouté aux sources et paquet ; contrôle de cohérence avec listing.json ajouté. Chrome authentifié : visibilité Masquée confirmée par le bandeau Steam, aperçu présent, sauvegarde des descriptions EN/FR confirmée, Harmony déclaré et affiché dans les éléments requis. Aucun changement de visibilité ni nouveau transfert du contenu par l'agent. La consultation web non authentifiée échoue, ce qui n'est pas utilisé seul comme preuve de confidentialité. Capture de la page conservée hors Git sous artifacts/workshop-proof/page-privee.png.
+
+Contrôles après conservation de l'identifiant : rebuild forcé réussi sans avertissement/erreur, 321 assertions, 23 cibles Harmony, contrats IL natifs, 43 membres et deux sites IL optionnels réussis. ZIP et staging onze fichiers vérifiés par SHA256. Le téléchargement sous SteamLibrary/steamapps/workshop/content/294100/3826051737 contient exactement les onze fichiers de l'installation envoyée ; toutes leurs empreintes SHA256 correspondent. Le README du nouveau paquet reflète désormais le statut privé ; aucun nouveau transfert de ce paquet effectué.
+
+Note initiale auto-générée remplacée par les notes 1.0.0 validées EN/FR dans leurs langues respectives ; persistance contrôlée après rechargement des formulaires. Retour à la fiche principale : toujours Masquée. Aucun changement de visibilité ni autre réglage de compte. L'activation de la copie téléchargée dans une partie n'a pas été testée séparément ; seule l'intégrité du téléchargement est contrôlée.

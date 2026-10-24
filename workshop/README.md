@@ -2,6 +2,12 @@
 
 Le code correspond au périmètre initial validé par l'utilisateur jusqu'à 0.6.2. La version et le tag demandés pour cette première livraison complète sont **1.0.0**. Cette préparation ne publie rien sur Steam.
 
+## État de la page
+
+Premier envoi effectué manuellement par le créateur : [Work Rework](https://steamcommunity.com/sharedfiles/filedetails/?id=3826051737), identifiant **3826051737**. Visibilité Masquée (privée) vérifiée dans la session du propriétaire. Descriptions et note de première publication anglaises et françaises validées enregistrées dans leurs langues respectives, sans référence au dépôt ; Harmony déclaré comme seul article requis. Grouped Pawns Lists reste optionnel. Téléchargement vérifié : les onze fichiers correspondent à l'installation envoyée. Ne pas passer en public sans nouvelle instruction.
+
+`About/PublishedFileId.txt` est conservé dans les sources et les paquets : toujours mettre à jour cet article, ne pas créer un second envoi.
+
 ## Éléments prêts à relire
 
 - Couverture : `../About/Preview.png`, PNG carré 640 × 640, 816 832 octets. L'original généré est conservé dans `assets/preview-master.png`. L'icône personnelle `../About/ModIcon.png` n'a pas été remplacée.
@@ -21,7 +27,7 @@ Depuis la racine du projet :
 ./prepare-workshop.ps1
 ```
 
-Le script crée `artifacts/workshop/WorkRework-1.0.0-<horodatage UTC>/WorkRework` et un `manifest.json` adjacent. Le sous-dossier **WorkRework** est le contenu destiné au jeu ; le manifeste reste à côté. Il ne contient que les dix fichiers autorisés : métadonnées, icône, aperçu, LoadFolders, DLL propre, README, deux documents de licence et traductions FR/EN.
+Le script crée `artifacts/workshop/WorkRework-1.0.0-<horodatage UTC>/WorkRework` et un `manifest.json` adjacent. Le sous-dossier **WorkRework** est le contenu destiné au jeu ; le manifeste reste à côté. Il contient les onze fichiers autorisés : métadonnées, PublishedFileId, icône, aperçu, LoadFolders, DLL propre, README, deux documents de licence et traductions FR/EN.
 
 Ne pas sélectionner le checkout de développement comme dossier d'envoi. Le code local du jeu 1.7 confirme que l'uploader prend le dossier racine du mod : il faut utiliser le contenu propre, pas les sources, `.git`, outils ou décompilations.
 
@@ -30,9 +36,9 @@ Ne pas sélectionner le checkout de développement comme dossier d'envoi. Le cod
 - [x] Couverture, titre et présentation FR/EN acceptés par l'utilisateur ; liens vers le dépôt retirés à sa demande.
 - [x] Version 1.0.0 visible dans RimSort, démarrage sans erreur et fonctionnement en partie validés par les trois réponses utilisateur.
 - [x] Build final, contrats, aperçu et manifeste de fichiers conformes (voir docs/TESTING.md).
-- [ ] Harmony est le seul élément requis ; Grouped Pawns Lists reste optionnel. Ses utilisateurs installent également RWLayout.
-- [ ] Choix de la visibilité Steam confirmé et contrôle des réglages de visibilité lors de la mise en place de la page.
-- [ ] Autorisation explicite d'effectuer l'envoi Workshop. Ne pas confirmer l'upload ni accepter un accord Steam avant cette étape.
+- [x] Harmony déclaré comme seul élément requis ; Grouped Pawns Lists reste optionnel. Ses utilisateurs installent également RWLayout.
+- [x] Visibilité Masquée (privée) vérifiée sur la page créée. Aucun passage en public autorisé.
+- [x] Envoi effectué par le créateur et identifiant conservé. Textes FR/EN enregistrés sur la page.
 
 ## Lors de l'envoi autorisé
 

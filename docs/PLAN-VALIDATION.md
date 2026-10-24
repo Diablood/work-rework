@@ -180,6 +180,7 @@ Complex Jobs reste une référence et une cible possible, sans être une dépend
 - [x] Préparer couverture, descriptions et note de publication FR/EN ; préserver ModIcon.png.
 - [x] Préparer un paquet Workshop propre, distinct du checkout, avec contrôle des empreintes.
 - [x] Approbation du visuel et des textes par l'utilisateur ; références GitHub retirées à sa demande.
-- [ ] Publication Steam explicitement autorisée et réalisée, puis conservation du PublishedFileId.
+- [x] Premier envoi Steam effectué manuellement par l'utilisateur en privé ; PublishedFileId 3826051737 conservé, page FR/EN et dépendance Harmony configurées.
+- [ ] Passage en public uniquement sur nouvelle instruction de l'utilisateur.
 
 Les contrôles de compilation et le statut de sauvegarde GitHub sont consignés dans TESTING.md. Aucune nouvelle compatibilité n'est en cours.

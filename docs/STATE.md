@@ -52,3 +52,15 @@ Couverture validée et texte accepté par l'utilisateur, sous réserve du retrai
 Installation finale : 1.0.0 installée dans Mods/WorkRework, dix empreintes et inventaire exact vérifiés ; backup de 0.6.2 artifacts/backups/WorkRework-20261024-105548-9946744.zip. Attendre le contrôle utilisateur RimSort/démarrage/Travail avant envoi Steam. Les mentions de 0.6.2 installée ci-dessus sont désormais historiques. Aucun upload effectué.
 
 Validation finale utilisateur 1.0.0 : les trois contrôles interactifs (version RimSort, démarrage sans erreur, fonctionnement Travail/priorités/dépliages/groupes) sont acceptés. Prochaine étape : choix de visibilité et autorisation d'envoi Workshop, puis publication et conservation du PublishedFileId. Aucun upload effectué.
+
+### Envoi autorisé uniquement en privé
+
+L'utilisateur autorise la publication Workshop en conservant une visibilité privée pour le moment. Aucun passage en public autorisé. Il propose de réaliser le premier envoi manuellement si l'automatisation est compliquée. Inspection locale : Workshop.SetWorkshopItemDataFrom ne règle pas explicitement la visibilité ; l'état privé initial n'est donc pas garanti par notre inspection. Aucun bouton d'envoi actionné et aucun item créé. Prochaine étape : afficher l'écran d'envoi sans confirmer et vérifier la possibilité de sélectionner Privé avant transfert, ou utiliser un uploader permettant de fixer explicitement la visibilité à 2 (Private). Ne pas modifier le mod de gameplay pour contourner ce point. Toute acceptation d'accord Steam reste à la charge de l'utilisateur.
+
+### Article Workshop créé et page configurée — 24 octobre 2026
+
+Premier envoi réalisé manuellement par l'utilisateur : https://steamcommunity.com/sharedfiles/filedetails/?id=3826051737. PublishedFileId 3826051737 également lu dans Mods/WorkRework/About/PublishedFileId.txt et conservé dans les sources, listing.json et l'allowlist du paquet (onze fichiers désormais). Version 1.0.0 inchangée. Ne jamais créer un autre article pour une mise à jour.
+
+Session Chrome du propriétaire accessible : page Work Rework et bandeau « Visibilité actuelle : Masquée » vérifiés. Descriptions BBCode validées EN et FR enregistrées dans leurs champs de langue respectifs avec confirmation Steam. Harmony 2009463077 ajouté comme seul article requis et vérifié sur la fiche ; Grouped Pawns Lists reste optionnel. Aperçu validé visible. Aucun changement de visibilité, aucun passage public autorisé. Capture sous artifacts/workshop-proof/page-privee.png (hors Git). Vérification du téléchargement et notes de changement encore à compléter ; aucun nouveau test de gameplay nécessaire pour ces seules métadonnées.
+
+Configuration privée terminée : descriptions et notes initiales EN/FR enregistrées ; Harmony seul requis ; visibilité Masquée conservée. Téléchargement Workshop vérifié (inventaire et onze SHA256 identiques à l'installation envoyée). Nouveau paquet 1.0.0 incluant PublishedFileId préparé et contrôlé, sans nouveau transfert ; jeu actif, installation non remplacée. Prochaine étape facultative : captures de galerie ; passage en public seulement sur nouvelle instruction.

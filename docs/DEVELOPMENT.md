@@ -30,6 +30,6 @@ With RimWorld closed, `./deploy.ps1` backs up an existing local installation and
 
 Keep the version synchronized between `Directory.Build.props`, `About/About.xml` and `workshop/listing.json`. The requested first release and Git tag are both `1.0.0`. Publishing a Steam item or a GitHub release is separate from creating a Git tag.
 
-The existing MIT license is preserved. Do not commit game DLLs, decompiled source, private configuration, saves, logs or credentials. `artifacts`, intermediate outputs and local agent settings are ignored. `About/PublishedFileId.txt`, once created by an authorized Workshop upload, is the item identity to preserve for subsequent updates.
+The existing MIT license is preserved. Do not commit game DLLs, decompiled source, private configuration, saves, logs or credentials. `artifacts`, intermediate outputs and local agent settings are ignored. `About/PublishedFileId.txt` contains the existing item identity **3826051737** and is included in packages to preserve it for subsequent updates. Never replace it with zero or create another item for an update.
 
 Detailed historical checks and user feedback are in `TESTING.md`. Current project handoff is in `STATE.md`.

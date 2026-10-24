@@ -52,7 +52,7 @@ Adding the mod to an existing save and saving/reloading settings were user-teste
 
 The development checkout includes build instructions, validation records and Workshop preparation documents.
 
-The complete feature set was accepted by the user through version 0.6.2. Version **1.0.0** is the first complete release, prepared from that baseline. Steam publication is a separate action; this repository does not imply that a Workshop item has already been published.
+The complete feature set was accepted by the user through version 0.6.2. Version **1.0.0** is the first complete release, prepared from that baseline. Its Workshop item has been created and is currently private.
 
 Source, scripts and documentation use the existing MIT license. Visual assets are separate: see [LICENSING.md](LICENSING.md). The cover is AI-generated promotional artwork, not an in-game screenshot. The creator-provided mod icon is preserved.
 

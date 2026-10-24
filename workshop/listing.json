@@ -10,6 +10,12 @@
   "requiredWorkshopItems": [2009463077],
   "optionalWorkshopItems": [2340773428],
   "gameGeneratedTags": ["Mod", "1.7"],
-  "publishedFileId": null,
-  "status": "prepared-for-review"
+  "publishedFileId": "3826051737",
+  "workshopUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=3826051737",
+  "requestedVisibility": "private",
+  "status": "uploaded-private",
+  "verifiedVisibility": "private",
+  "localizedDescriptions": ["english", "french"],
+  "localizedChangenotes": ["english", "french"],
+  "requiredItemsConfigured": true
 }

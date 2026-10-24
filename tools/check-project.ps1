@@ -43,6 +43,10 @@ if ($listing.version -cne $expectedVersion -or $listing.gitTag -cne $expectedVer
     $listing.packageId -cne $about.ModMetaData.packageId -or $listing.title -cne $about.ModMetaData.name) {
     throw 'Workshop listing identity, version and Git tag must match the release metadata.'
 }
+$publishedFileId = (Get-Content -Raw -LiteralPath (Join-Path $projectRoot 'About/PublishedFileId.txt')).Trim()
+if ($publishedFileId -notmatch '^[1-9][0-9]+$' -or $publishedFileId -cne [string]$listing.publishedFileId) {
+    throw 'PublishedFileId.txt must match the existing Workshop item in listing.json.'
+}
 [xml]$folders = Get-Content -Raw -LiteralPath (Join-Path $projectRoot 'LoadFolders.xml')
 if ($about.ModMetaData.packageId -cne 'diablood.workrework') { throw 'Unexpected packageId.' }
 if (@($about.ModMetaData.supportedVersions.li).Count -ne 1 -or $about.ModMetaData.supportedVersions.li -ne '1.7') {
