@@ -1,6 +1,6 @@
 # Historique
 
-## Correctif local en validation — libellés de l'organisation
+## Correctif local validé — libellés de l'organisation
 
 - L'éditeur utilise maintenant le même libellé court de catégorie que l'onglet Travail. Les WorkTypeDefs de mods ou DLC sans champ label générique ne produisent plus de lignes sans nom.
 - Nom d'origine également corrigé dans le détail des tâches autonomes et le bouton de réintégration. Repli sur le label générique, puis defName, si le libellé court est absent.
