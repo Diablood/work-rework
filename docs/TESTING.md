@@ -470,3 +470,7 @@ Exécuté : prepare-workshop.ps1 (rebuild forcé), compilation zéro avertisseme
 Après fermeture du jeu confirmée par l'utilisateur, deploy.ps1 installe la 1.0.1 dans Mods/WorkRework et vérifie les onze SHA256, avec sauvegarde de la copie locale précédente. Aucun nouveau test en jeu après le changement de numéro : code des libellés déjà accepté par l'utilisateur. Aucun transfert Workshop ni modification de visibilité ; dernière version distante connue 1.0.0 privée. Envoi et vérification de la copie téléchargée 1.0.1 à effectuer par le créateur.
 
 Sauvegarde locale avant installation 1.0.1 : artifacts/backups/WorkRework-20261024-120907-8878903.zip. Version installée About 1.0.1 et PublishedFileId 3826051737 relus après déploiement.
+
+### Mise à jour Workshop signalée — 24 octobre 2026
+
+L'utilisateur confirme « Workshop à jour » après préparation et installation de la 1.0.1. Dernière version envoyée signalée : 1.0.1 sur l'article existant 3826051737. Contrôle local immédiat : About de la copie sous steamapps/workshop/content/294100/3826051737 encore en 1.0.0, sept fichiers sur onze identiques à l'installation locale 1.0.1. Le téléchargement du correctif n'est donc pas encore validé ; aucune conclusion d'échec de l'envoi n'en est tirée. Visibilité privée toujours demandée ; aucun changement Steam par l'agent, pas de nouvelle vérification de la page privée ni des notes de version à ce stade. Le tag 1.0.1 reste sur le commit de livraison ; seul le suivi évolue sur main.

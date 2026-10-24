@@ -1,6 +1,6 @@
 # Préparation Workshop — Work Rework 1.0.1
 
-La première version complète 1.0.0 reste publiée en privé. Le correctif **1.0.1**, validé localement par l'utilisateur, répare les noms de catégories et sous-tâches dans l'éditeur et les infobulles. Sa version et son tag sont **1.0.1**. Cette préparation ne publie rien sur Steam ; le créateur effectuera la mise à jour de l'article existant.
+Le correctif **1.0.1**, validé localement par l'utilisateur, répare les noms de catégories et sous-tâches dans l'éditeur et les infobulles. Sa version et son tag sont **1.0.1**. Le créateur confirme la mise à jour de l'article existant ; lors du contrôle suivant, la copie téléchargée localement était encore en 1.0.0. La vérification du téléchargement 1.0.1 reste à faire. Visibilité privée toujours demandée ; aucun réglage Steam modifié par l'agent.
 
 ## État de la page
 
