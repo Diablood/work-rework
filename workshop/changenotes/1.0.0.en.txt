@@ -1,0 +1,5 @@
+Work Rework 1.0.0 — first complete release.
+
+Expandable vanilla work categories, individual subtask priorities, configurable maximum 1–9, initial priority for new colonists, custom group/task ordering, standalone tasks, draft Apply/Cancel and vanilla-organization reset, current-work highlighting, vertical labels, and optional Grouped Pawns Lists integration.
+
+English and French. RimWorld 1.7. Harmony required.

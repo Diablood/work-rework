@@ -1,5 +1,8 @@
-Work Rework 1.0.0 — first complete release.
+Work Rework 1.0.1 — missing label fixes.
 
-Expandable vanilla work categories, individual subtask priorities, configurable maximum 1–9, initial priority for new colonists, custom group/task ordering, standalone tasks, draft Apply/Cancel and vanilla-organization reset, current-work highlighting, vertical labels, and optional Grouped Pawns Lists integration.
+- Fixed missing names in Organize work for some mod and DLC categories: the editor now uses the same category label as the Work tab.
+- Fixed subtask, standalone task and original category names. When a definition has no label, its verb, gerund or internal identifier is used as a fallback.
+- Fixed missing subtask names in category header tooltips, including Stabilizing under Doctor. Emergency markers and task order are preserved.
+- In developer mode, organization editor tooltips show task identifiers to help diagnose remaining issues.
 
-English and French. RimWorld 1.7. Harmony required.
+Display fixes only: priorities, saved organization and work selection are unchanged. English and French. RimWorld 1.7; Harmony required.

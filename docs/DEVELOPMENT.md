@@ -28,7 +28,7 @@ With RimWorld closed, `./deploy.ps1` backs up an existing local installation and
 
 `./prepare-workshop.ps1` builds and creates a fresh clean upload folder and SHA256 manifest under `artifacts/workshop`. `-SkipBuild` accepts a previously built package only when all packaged sources still match. Neither mode uploads anything.
 
-Keep the version synchronized between `Directory.Build.props`, `About/About.xml` and `workshop/listing.json`. The requested first release and Git tag are both `1.0.0`. Publishing a Steam item or a GitHub release is separate from creating a Git tag.
+Keep the version synchronized between `Directory.Build.props`, `About/About.xml` and `workshop/listing.json`. The current patch release and Git tag are both `1.0.1`; the initial `1.0.0` tag is preserved. Publishing a Steam item or a GitHub release is separate from creating a Git tag.
 
 The existing MIT license is preserved. Do not commit game DLLs, decompiled source, private configuration, saves, logs or credentials. `artifacts`, intermediate outputs and local agent settings are ignored. `About/PublishedFileId.txt` contains the existing item identity **3826051737** and is included in packages to preserve it for subsequent updates. Never replace it with zero or create another item for an update.
 

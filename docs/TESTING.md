@@ -460,3 +460,13 @@ Installation du correctif d'infobulle : utilisateur confirme le jeu fermé ; dep
 ### Correctif des libellés accepté — 24 octobre 2026
 
 Dernière réponse utilisateur au formulaire : « Oui, l'infobulle est correcte ». Survol du parent Médecin validé avec Stabilizing à la place de la ligne vide. Ce retour complète les validations précédentes : catégories visibles dans Organiser les tâches, sous-tâche Stabilizing visible dans l'éditeur et affichage autonome confirmé OK. Le défaut d'affichage signalé est clos sur la copie locale. Contrôles de compilation/régression déjà réussis au dernier build ; aucune nouvelle modification de code, aucun nouveau test en jeu par l'agent. Version locale 1.0.0 inchangée. Le Workshop privé 3826051737 reste sur sa première DLL, sans les correctifs locaux ; toute mise à jour distante doit être consignée séparément, sans passer en public.
+
+### Livraison 1.0.1 — notes, version et préparation Workshop
+
+Demande explicite utilisateur : préparer notes, versionnement, push et tag GitHub ; mise à jour Workshop réalisée ensuite par lui. Version/tag 1.0.1, article existant 3826051737 inchangé. Notes FR/EN actualisées, notes initiales 1.0.0 archivées. Aucune nouvelle logique de jeu depuis le correctif accepté ; numéro et documents synchronisés.
+
+Exécuté : prepare-workshop.ps1 (rebuild forcé), compilation zéro avertissement/erreur ; 321 assertions, contrats IL natifs, 24 cibles Harmony, 43 membres et deux sites IL optionnels réussis. XML, traductions, aperçu, version DLL/About/listing et PublishedFileId conformes. Paquet artifacts/packages/WorkRework-1.0.1.zip et dossier propre artifacts/workshop/WorkRework-1.0.1-20261024-120823-7403446/WorkRework : onze fichiers et empreintes vérifiés.
+
+Après fermeture du jeu confirmée par l'utilisateur, deploy.ps1 installe la 1.0.1 dans Mods/WorkRework et vérifie les onze SHA256, avec sauvegarde de la copie locale précédente. Aucun nouveau test en jeu après le changement de numéro : code des libellés déjà accepté par l'utilisateur. Aucun transfert Workshop ni modification de visibilité ; dernière version distante connue 1.0.0 privée. Envoi et vérification de la copie téléchargée 1.0.1 à effectuer par le créateur.
+
+Sauvegarde locale avant installation 1.0.1 : artifacts/backups/WorkRework-20261024-120907-8878903.zip. Version installée About 1.0.1 et PublishedFileId 3826051737 relus après déploiement.

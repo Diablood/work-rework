@@ -94,3 +94,11 @@ Origine vérifiée dans le jeu installé : PawnColumnWorker_WorkPriority.GetHead
 Correctif d'infobulle parent installé après fermeture confirmée. Build sans avertissement/erreur, 321 assertions, 24 cibles Harmony et contrats réussis ; onze SHA256 installés conformes. Attente du seul contrôle au survol de Médecin (Stabilizing). Éditeur et autonomie validés. Aucun envoi Steam.
 
 Validation finale du correctif des libellés : utilisateur confirme l'infobulle Médecin correcte (Stabilizing visible). Catégories, enfant, autonomie et infobulle parent désormais acceptés ; défaut clos sur la copie locale. Aucun nouveau code ou déploiement nécessaire. Copie Workshop privée encore antérieure aux correctifs ; pas de transfert ni changement de visibilité effectué.
+
+## Préparation de la livraison 1.0.1
+
+Demande explicite utilisateur : patch notes, versionnement, push GitHub et tag ; il effectuera lui-même la mise à jour Workshop. Choix 1.0.1 (correctif d'affichage), tag exact 1.0.1 ; tag historique 1.0.0 conservé. About, Directory.Build.props, README, guide FR et listing synchronisés. Notes FR/EN actualisées, premières notes 1.0.0 archivées. Article existant 3826051737 conservé ; listing distingue la version préparée 1.0.1 de la dernière envoyée 1.0.0. Visibilité privée toujours demandée. Aucun changement de logique depuis les correctifs validés en jeu ; cette livraison formalise leur version.
+
+L'utilisateur confirme RimWorld fermé et autorise l'installation locale de la 1.0.1 prête pour son envoi. Le démarrage avec le numéro final 1.0.1 n'est pas un nouveau test effectué par l'agent ; la validation visuelle porte sur le même code compilé précédemment sous 1.0.0.
+
+Livraison préparée : rebuild/321 assertions/24 cibles Harmony/contrats natifs et optionnels réussis ; ZIP et staging onze fichiers SHA256 conformes. 1.0.1 installée localement avec onze empreintes conformes, PublishedFileId conservé. Aucun envoi Steam ; attendre le retour utilisateur après sa mise à jour privée. Git : commit de livraison puis tag annoté 1.0.1 sur ce commit, push de main et du tag et vérification des références distantes.

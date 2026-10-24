@@ -1,12 +1,12 @@
 # Historique
 
-## Correctif local validé — libellés de l'organisation
+## 1.0.1 — libellés de l'organisation et infobulles
 
 - L'éditeur utilise maintenant le même libellé court de catégorie que l'onglet Travail. Les WorkTypeDefs de mods ou DLC sans champ label générique ne produisent plus de lignes sans nom.
 - Nom d'origine également corrigé dans le détail des tâches autonomes et le bouton de réintégration. Repli sur le label générique, puis defName, si le libellé court est absent.
 - Sous-tâches : libellé commun à Travail, en-têtes verticaux, organisation et infobulles ; si le label chargé est vide, repli sur le verbe traduit, le gérondif, puis l'identifiant de la tâche. En mode développeur, l'infobulle de l'éditeur précise le defName pour identifier les cas persistants.
 - Infobulle des catégories parentes : la liste native des sous-tâches bénéficie du même libellé de secours si un enfant est sans nom ; ordre et marqueurs d'urgence conservés.
-- Aucun changement de priorité, d'organisation sauvegardée ou de sélection des tâches. Version et tag inchangés pour ce test local ; aucun transfert Workshop de ce correctif.
+- Aucun changement de priorité, d'organisation sauvegardée ou de sélection des tâches. Correctifs validés en jeu par l'utilisateur sur les catégories, l'enfant Stabilizing, l'autonomie et l'infobulle Médecin. Version et tag 1.0.1 ; mise à jour Workshop à effectuer par le créateur, visibilité privée conservée.
 
 ## 1.0.0 — première version complète
 

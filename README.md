@@ -2,7 +2,7 @@
 
 ![Work Rework](About/Preview.png)
 
-**RimWorld 1.7 · Version 1.0.0 · Harmony required · English / Français**
+**RimWorld 1.7 · Version 1.0.1 · Harmony required · English / Français**
 
 Take control of the Work tab: expand vanilla categories, set individual subtask priorities, reorder work and turn a task into a standalone column.
 
@@ -53,6 +53,8 @@ Adding the mod to an existing save and saving/reloading settings were user-teste
 The development checkout includes build instructions, validation records and Workshop preparation documents.
 
 The complete feature set was accepted by the user through version 0.6.2. Version **1.0.0** is the first complete release, prepared from that baseline. Its Workshop item has been created and is currently private.
+
+Version **1.0.1** fixes missing category and subtask names in the organization editor and Work tab tooltips, including labels supplied by mods or DLC. The fix was user-tested locally; the Workshop update is prepared for the creator to upload.
 
 Source, scripts and documentation use the existing MIT license. Visual assets are separate: see [LICENSING.md](LICENSING.md). The cover is AI-generated promotional artwork, not an in-game screenshot. The creator-provided mod icon is preserved.
 

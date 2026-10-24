@@ -1,6 +1,6 @@
 # Work Rework — guide français
 
-**RimWorld 1.7 · Version 1.0.0 · Harmony requis**
+**RimWorld 1.7 · Version 1.0.1 · Harmony requis**
 
 Work Rework reprend les catégories vanilla dans un onglet Travail plus précis : priorités par sous-tâche, ordre personnalisé, tâches autonomes et repère du travail courant.
 

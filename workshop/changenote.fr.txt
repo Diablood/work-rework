@@ -1,5 +1,8 @@
-Work Rework 1.0.0 — première version complète.
+Work Rework 1.0.1 — correction des libellés manquants.
 
-Catégories vanilla dépliables, priorités individuelles des sous-tâches, maximum réglable de 1 à 9, priorité initiale des nouveaux colons, ordre personnalisé des groupes/tâches, tâches autonomes, brouillon Appliquer/Annuler et retour au rangement vanilla, repère du travail courant, libellés verticaux et intégration optionnelle de Grouped Pawns Lists.
+- Correction des noms absents dans « Organiser les tâches » pour certaines catégories de mods ou DLC : l'éditeur utilise le même libellé que l'onglet Travail.
+- Correction des noms des sous-tâches, des tâches autonomes et de leur groupe d'origine. Si une définition n'a pas de libellé, un texte de secours utilise son verbe, son gérondif, puis son identifiant en dernier recours.
+- Correction de la liste des sous-tâches au survol d'une catégorie, notamment la ligne Stabilizing sous Médecin. Les marqueurs d'urgence et l'ordre sont conservés.
+- En mode développeur, l'infobulle de l'éditeur indique l'identifiant de la tâche pour faciliter le diagnostic.
 
-Français et anglais. RimWorld 1.7. Harmony requis.
+Correctifs d'affichage uniquement : priorités, organisation sauvegardée et sélection du travail inchangées. Français et anglais. RimWorld 1.7 ; Harmony requis.
