@@ -55,7 +55,7 @@ internal sealed class Dialog_WorkOrganization : Window
             else
             {
                 Widgets.DrawMenuSection(right);
-                Widgets.Label(right.ContractedBy(12f), "WR_StandaloneDetails".Translate(Label(selectedRoot), WorkCatalog.Type(draft.Origin(selectedRoot[2..]))!.LabelCap));
+                Widgets.Label(right.ContractedBy(12f), "WR_StandaloneDetails".Translate(Label(selectedRoot), WorkCatalog.CategoryLabel(WorkCatalog.Type(draft.Origin(selectedRoot[2..]))!)));
             }
             DrawMoveButtons(new Rect(left.x, left.yMax + 8f, left.width, 32f), draft.Roots, selectedRoot);
             if (group)
@@ -70,7 +70,7 @@ internal sealed class Dialog_WorkOrganization : Window
             else if (!group)
             {
                 string task = selectedRoot[2..];
-                if (Widgets.ButtonText(new Rect(right.x, bottom, right.width, 32f), "WR_Reintegrate".Translate(WorkCatalog.Type(draft.Origin(task))!.LabelCap)))
+                if (Widgets.ButtonText(new Rect(right.x, bottom, right.width, 32f), "WR_Reintegrate".Translate(WorkCatalog.CategoryLabel(WorkCatalog.Type(draft.Origin(task))!))))
                     pending = () => { if (draft.Reintegrate(task, draft.Origin(task))) { selectedRoot = WorkLayout.Group(draft.Origin(task)); selectedChild = task; } };
             }
             Rect reset = new(left.x, bottom, left.width, 32f);
@@ -149,5 +149,5 @@ internal sealed class Dialog_WorkOrganization : Window
     }
 
     private static string Label(string root) => root.StartsWith("G:", StringComparison.Ordinal)
-        ? WorkCatalog.Type(root[2..])!.LabelCap.ToString() : WorkCatalog.Giver(root[2..])!.LabelCap.ToString();
+        ? WorkCatalog.CategoryLabel(WorkCatalog.Type(root[2..])!) : WorkCatalog.Giver(root[2..])!.LabelCap.ToString();
 }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using RimWorld;
@@ -13,6 +14,10 @@ internal static class WorkCatalog
         .Select(type => new WorkCategory(type.defName, type.workGiversByPriority.Where(g => g.workType == type).Select(g => g.defName).Distinct().ToList())).ToList();
     internal static WorkGiverDef? Giver(string id) => DefDatabase<WorkGiverDef>.GetNamedSilentFail(id);
     internal static WorkTypeDef? Type(string id) => DefDatabase<WorkTypeDef>.GetNamedSilentFail(id);
+    // Work tab headers use labelShort. Mod/DLC WorkTypeDefs may omit Def.label.
+    internal static string CategoryLabel(WorkTypeDef type) => !string.IsNullOrWhiteSpace(type.labelShort)
+        ? type.labelShort.CapitalizeFirst()
+        : !string.IsNullOrWhiteSpace(type.label) ? type.LabelCap.ToString() : type.defName;
     internal static bool Standalone(WorkGiverDef giver) => WorkPriorityComponent.Current?.Layout.IsStandalone(giver.defName) == true;
     internal static IEnumerable<WorkGiverDef> Children(WorkTypeDef type) => WorkPriorityComponent.Current is { } component
         ? component.Layout.Children[type.defName].Select(Giver).OfType<WorkGiverDef>() : type.workGiversByPriority;
