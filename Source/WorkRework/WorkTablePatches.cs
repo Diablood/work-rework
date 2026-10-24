@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using HarmonyLib;
 using RimWorld;
 using UnityEngine;
@@ -74,6 +75,28 @@ internal static class WorkHeaderTipPatch
         WorkTableView view = WorkTableView.For(table);
         if (view.Children(__instance.def.workType).Count > 0)
             __result += "\n\n" + (view.IsExpanded(__instance.def.workType) ? "WR_Collapse" : "WR_Expand").Translate();
+    }
+}
+
+[HarmonyPatch(typeof(PawnColumnWorker_WorkPriority), "SpecificWorkListString")]
+internal static class WorkHeaderTaskLabelsPatch
+{
+    private static void Postfix(WorkTypeDef def, ref string __result)
+    {
+        // Keep the native list unless a loaded WorkGiver has no display label.
+        if (!def.workGiversByPriority.Any(giver => string.IsNullOrWhiteSpace(giver.LabelCap.ToString())))
+            return;
+        var text = new StringBuilder();
+        for (int i = 0; i < def.workGiversByPriority.Count; i++)
+        {
+            WorkGiverDef giver = def.workGiversByPriority[i];
+            text.Append(" - ").Append(WorkCatalog.TaskLabel(giver));
+            if (giver.emergency)
+                text.Append(" (").Append("EmergencyWorkMarker".Translate()).Append(')');
+            if (i < def.workGiversByPriority.Count - 1)
+                text.AppendLine();
+        }
+        __result = text.ToString();
     }
 }
 

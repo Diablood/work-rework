@@ -84,3 +84,11 @@ API locale vérifiée par ILSpy : Def.LabelCap renvoie null si label vide ; Work
 Pour identifier le cas si le rendu reste vide malgré un label non vide, l'infobulle de l'éditeur affiche WorkGiverDef / WorkTypeDef et le defName uniquement lorsque Prefs.DevMode est actif. Pas de journalisation par frame, aucun changement de préférences par l'agent. L'utilisateur confirme le jeu fermé et autorise l'installation locale. Version/tag conservés, aucun upload Workshop.
 
 Second correctif installé localement après build/tests réussis (321 assertions et contrats), onze SHA256 conformes. Backup artifacts/backups/WorkRework-20261024-114936-9786239.zip. Attente du contrôle visuel de l'enfant Médecin ; diagnostic defName en mode développeur si nécessaire. Workshop inchangé.
+
+### Infobulle du parent Médecin — troisième correction ciblée
+
+Retour utilisateur après deuxième correctif : « Stabilizing » visible dans l'éditeur ; affichage de la tâche autonome explicitement confirmé OK après rectification. Seule la liste des enfants au survol du parent Médecin reste sans nom pour cette tâche. Ne plus demander de retester l'autonomie comme défaut encore ouvert.
+
+Origine vérifiée dans le jeu installé : PawnColumnWorker_WorkPriority.GetHeaderTip appelle la méthode privée statique SpecificWorkListString(WorkTypeDef def), qui concatène directement WorkGiverDef.LabelCap et ne passe pas par nos workers enfants. Ajout d'un postfix étroit à cette méthode : conserve la liste native si tous les labels sont renseignés ; sinon reconstruit les lignes avec WorkCatalog.TaskLabel, en conservant ordre, tirets, retours à la ligne et EmergencyWorkMarker traduit. Aucun changement des priorités, du comportement ou des sauvegardes. Vingt-quatrième cible Harmony et paramètre def vérifiés par check-api.ps1 ; nombre attendu mis à jour. Version/tag inchangés, aucun envoi Workshop.
+
+Correctif d'infobulle parent installé après fermeture confirmée. Build sans avertissement/erreur, 321 assertions, 24 cibles Harmony et contrats réussis ; onze SHA256 installés conformes. Attente du seul contrôle au survol de Médecin (Stabilizing). Éditeur et autonomie validés. Aucun envoi Steam.
