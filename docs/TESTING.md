@@ -408,3 +408,7 @@ Couverture et textes FR/EN préparés pour relecture. Installation Mods conserv�
 ### Relecture publique — retrait des références GitHub
 
 Couverture et textes acceptés par l'utilisateur avec demande de retirer les références GitHub. Retrait effectué des textes publics FR/EN, métadonnées About, README livré et fiche de préparation ; aucune logique de jeu modifiée, version 1.0.0 conservée. prepare-workshop.ps1 réexécuté : compilation sans avertissement/erreur, 321 assertions et contrats natifs/optionnels réussis, dix fichiers ZIP et staging vérifiés par SHA256. Recherche complémentaire : aucune occurrence GitHub dans les textes publics ni dans le contenu texte du dernier dossier propre. Le manifeste interne adjacent conserve la destination de sauvegarde et n'est pas inclus dans le mod. Aucun envoi Steam, installation Mods toujours 0.6.2, aucun nouveau test en jeu.
+
+### Installation finale 1.0.0 — 24 octobre 2026
+
+Suite au « on continue » utilisateur, paquet final vérifié par check-project.ps1 et prepare-workshop.ps1 -SkipBuild, puis installé par deploy.ps1, jeu fermé. Dix SHA256 installés conformes ; inventaire exact des dix fichiers, sans fichier supplémentaire ni référence GitHub dans les textes livrés. About 1.0.0 et assembly 1.0.0.0 vérifiés. Sauvegarde de la 0.6.2 : artifacts/backups/WorkRework-20261024-105548-9946744.zip. Aucun réglage ni sauvegarde de partie modifié. Dernier contrôle utilisateur à faire : version dans RimSort, démarrage sans erreur et onglet Travail. Aucun lancement de jeu ni upload Steam par l'agent.
