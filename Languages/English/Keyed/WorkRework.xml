@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <Priority5>Priority 5</Priority5>
+  <Priority6>Priority 6</Priority6>
+  <Priority7>Priority 7</Priority7>
+  <Priority8>Priority 8</Priority8>
+  <Priority9>Priority 9</Priority9>
+  <WR_TaskMarker>task</WR_TaskMarker>
+  <WR_ExplicitPriority>Individual task priority (blue outline)</WR_ExplicitPriority>
+  <WR_InheritedPriority>Last group value (inherited)</WR_InheritedPriority>
+  <WR_ChildPriorityTip>{0}\nCategory: {1}\n{2}: {3}\n\nLeft/right-click: change. Ctrl + right-click: inherit again. Middle-click: pick a value or reset this category's tasks for this pawn.</WR_ChildPriorityTip>
+  <WR_ParentBlocksChildren>Category disabled: all its tasks are blocked. Enable the category to use or edit its tasks.</WR_ParentBlocksChildren>
+  <WR_ParentMixedTip>*: tasks have different priorities. The parent shows their lowest non-zero priority. Editing the parent applies the new value to all its tasks and resets their exceptions. Middle-click to pick a value directly.</WR_ParentMixedTip>
+  <WR_UseParentPriority>Inherit from {0}: {1}</WR_UseParentPriority>
+  <WR_PriorityValue>Priority {0}</WR_PriorityValue>
+  <WR_ResetCategoryChildren>Restore all tasks in {0} to group value {1} for this pawn</WR_ResetCategoryChildren>
+  <WR_VerticalLabels>Display work labels vertically</WR_VerticalLabels>
+  <WR_VerticalLabelsTip>Rotates category and task names by 90° and narrows their columns. Ctrl + left-click on a label still expands or collapses its tasks. Disable this option to restore horizontal labels.</WR_VerticalLabelsTip>
+  <WR_Expand>Ctrl + left-click the label to show this category's individual tasks.</WR_Expand>
+  <WR_Collapse>Ctrl + left-click the label to hide this category's individual tasks.</WR_Collapse>
+  <WR_ChildHeader>{0}\nOriginal category: {1}\n\nCells inherit the category priority unless an individual priority is outlined in blue.</WR_ChildHeader>
+  <WR_Enabled>enabled</WR_Enabled>
+  <WR_Disabled>disabled</WR_Disabled>
+  <WR_Organize>Organize work</WR_Organize>
+  <WR_OrganizationHelp>Select a group on the left to display its children on the right. Drag rows within their list to reorder them, or use Move up / Move down. At equal priority, main order then child order break ties (emergency work retains its native pass).</WR_OrganizationHelp>
+  <WR_MainColumns>Main columns — left-to-right order</WR_MainColumns>
+  <WR_GroupChildren>Selected group's children — sub-order</WR_GroupChildren>
+  <WR_GroupMarker>group</WR_GroupMarker>
+  <WR_StandaloneMarker>standalone</WR_StandaloneMarker>
+  <WR_Extract>Make standalone</WR_Extract>
+  <WR_Reintegrate>Return to {0}</WR_Reintegrate>
+  <WR_MoveUp>Move up</WR_MoveUp>
+  <WR_MoveDown>Move down</WR_MoveDown>
+  <WR_Apply>Apply</WR_Apply>
+  <WR_Cancel>Cancel</WR_Cancel>
+  <WR_DragWithinList>Drag the ≡ handle within this list only. Click the name to select. To change level, use Make standalone / Return to group.</WR_DragWithinList>
+  <WR_StandaloneDetails>{0}\n\nStandalone task. Its priority no longer depends on the {1} group. It may only return to this original group.\n\nMove it in the left list to choose its position.</WR_StandaloneDetails>
+  <WR_OrganizationSaveNote>Draft until Apply. Shared organization, stored in this save. Each pawn keeps individual priorities.</WR_OrganizationSaveNote>
+  <WR_OrganizationNeedsGame>Load a game to organize its work. Organization is stored separately in each save.</WR_OrganizationNeedsGame>
+  <WR_StandaloneHeader>{0}\nOriginal category: {1}\n\nStandalone task: priority independent of its original category.</WR_StandaloneHeader>
+  <WR_StandalonePriorityTip>{0}\nOriginal category: {1}\n{2}: {3}\n\nLeft/right click: change priority. Middle click: choose a value. Its original category does not block this standalone task; pawn incapabilities still apply.</WR_StandalonePriorityTip>
+  <WR_CurrentWork>Current work: {0}\nThe green frame marks the task this pawn is currently performing.</WR_CurrentWork>
+  <WR_ResetOrganization>Restore vanilla organization</WR_ResetOrganization>
+  <WR_ResetOrganizationTip>Restores the original category and child order and returns every standalone task to its original group. Individual priorities are preserved as when returning a task. Changes only the draft: Apply confirms, Cancel discards.</WR_ResetOrganizationTip>
+  <WR_MaximumPriority>Maximum priority (1 to 9)</WR_MaximumPriority>
+  <WR_MaximumPriorityTip>Limits available numbers. Applying a lower maximum reduces higher values to this cap in the current game, including parents and overrides. Raising it again does not recover previous numbers. This global setting is also enforced when loading games.</WR_MaximumPriorityTip>
+  <WR_InitialPriority>Default priority for new colonists</WR_InitialPriority>
+  <WR_InitialPriorityTip>A value between 1 and the maximum, initially 3 as in vanilla. Used only on a new pawn's first work initialization, for tasks the game enables. Does not change existing pawns or the value used when reactivating a task. Initially disabled tasks stay at zero.</WR_InitialPriorityTip>
+  <WR_ApplyPrioritySettings>Apply priority settings</WR_ApplyPrioritySettings>
+  <WR_GroupPriorityTip>{0} editable pawns in this group.\nLeft/right click: change priority.\nMiddle click: choose a value.\n…: different priorities between pawns.\n*: different priorities between subtasks.</WR_GroupPriorityTip>
+  <WR_GroupInherit>Restore child inheritance for eligible pawns</WR_GroupInherit>
+</LanguageData>

@@ -1,0 +1,5 @@
+Work Rework 1.0.0 — première version complète.
+
+Catégories vanilla dépliables, priorités individuelles des sous-tâches, maximum réglable de 1 à 9, priorité initiale des nouveaux colons, ordre personnalisé des groupes/tâches, tâches autonomes, brouillon Appliquer/Annuler et retour au rangement vanilla, repère du travail courant, libellés verticaux et intégration optionnelle de Grouped Pawns Lists.
+
+Français et anglais. RimWorld 1.7. Harmony requis.

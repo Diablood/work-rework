@@ -1,0 +1,55 @@
+[h1]Your Work tab, organized your way[/h1]
+Work Rework expands RimWorld's Work tab while keeping the familiar vanilla categories. Set priorities for individual subtasks, rearrange their order and pull a task out into its own column.
+
+[h2]Features[/h2]
+[list]
+[*]Expand and collapse vanilla work categories with Ctrl + left-click on their label.
+[*]Choose a maximum priority from 1 to 9. Priority 1 comes first; 0 disables work.
+[*]Set per-pawn subtask overrides, or inherit the category's last group value.
+[*]Parents show the lowest non-zero child priority, with * when their children differ.
+[*]Reorder groups and children with drag-and-drop or Move up / Move down.
+[*]Make a subtask standalone, then place it among the main columns. Return it only to its original group.
+[*]Keep each pawn's effective priorities when changing the organization.
+[*]Prepare changes in a draft, then Apply or Cancel. Restore vanilla organization with one button.
+[*]See the current work highlighted by a green frame on the visible task or its collapsed parent.
+[*]Use optional vertical labels to save space. Scrollbars appear when the visible content overflows.
+[*]Set the initial priority for new colonists, without changing existing assignments.
+[*]English and French interface.
+[/list]
+
+[h2]Quick controls[/h2]
+[list]
+[*][b]Ctrl + left-click a category label:[/b] expand or collapse its children.
+[*][b]Left / right-click a priority cell:[/b] cycle its priority.
+[*][b]Middle-click:[/b] choose a value from a menu.
+[*][b]Ctrl + right-click an attached child:[/b] restore inheritance.
+[*][b]Organize work:[/b] open the two-list editor from the Work tab or the mod settings.
+[/list]
+Editing a parent applies the chosen value to all its attached children and resets their overrides. Disabling a parent blocks its attached children. Extracted standalone tasks remain independent.
+
+[h2]How task order works[/h2]
+Numeric priority comes first. During ordinary work selection, your main order and child order break ties. Moving a priority-6 task before a priority-2 task does not make it run first. Native emergency passes and forced orders retain their own rules.
+
+Organization is shared by all pawns in the save; priorities remain individual. The organization and subtask overrides are stored in the save. Vertical labels, the maximum priority and the new-colonist default are global mod settings.
+
+[b]Lowering the maximum:[/b] values above the new limit are reduced to that limit. Raising it later does not recover the previous numbers. The default priority is used only when a new pawn's work settings are first initialized, not when reactivating an existing task.
+
+[h2]Requirements and compatibility[/h2]
+[list]
+[*][b]RimWorld 1.7[/b]
+[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2009463077]Harmony[/url] is required.
+[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2340773428]Grouped Pawns Lists[/url] is optional. Its group-row controls support categories, children and standalone tasks, the configured maximum and both priority modes. It needs its own RWLayout dependency.
+[*]With grouping enabled, load Harmony → RWLayout → Grouped Pawns Lists → Work Rework.
+[*][b]Do not combine with Work Tab.[/b] Work Rework manages the same work interface and priority selection.
+[/list]
+The Grouped Pawns Lists integration was user-tested with version 2.3.2 on RimWorld 1.7. Other work-management mods have not been individually validated. The initial supported test scope is adult human colonists; other populations have not received dedicated validation.
+
+[h2]Saves[/h2]
+Adding the mod to an existing save and saving/reloading its settings were user-tested. Removal and downgrades have not been validated.
+
+[h2]Source and feedback[/h2]
+[url=https://github.com/Diablood/work-rework]Source code and issue tracker[/url] — MIT license for code. Visual assets are separate; see LICENSING.md.
+For a bug report, include the RimWorld and mod versions, the relevant mods, steps to reproduce, your priority settings and the relevant log excerpt.
+
+Inspired by the ideas of Work Tab and Complex Jobs. Work Rework is an independent mod and does not bundle their code or binaries.
+The cover is promotional artwork illustrating the mod's features, not an in-game screenshot.

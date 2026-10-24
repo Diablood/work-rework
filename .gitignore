@@ -1,0 +1,14 @@
+artifacts/
+**/bin/
+**/obj/
+1.7/Assemblies/*.dll
+1.7/Assemblies/*.pdb
+*.user
+.vs/
+.idea/
+.codex/
+.agents/
+.env
+.env.*
+!.env.example
+*.log

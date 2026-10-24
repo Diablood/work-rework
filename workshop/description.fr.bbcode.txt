@@ -1,0 +1,55 @@
+[h1]Votre onglet Travail, organisé à votre façon[/h1]
+Work Rework enrichit l'onglet Travail de RimWorld en conservant les catégories vanilla. Réglez les priorités de chaque sous-tâche, réorganisez leur ordre et extrayez une tâche dans sa propre colonne.
+
+[h2]Fonctionnalités[/h2]
+[list]
+[*]Ouvrir et fermer les catégories vanilla par Ctrl + clic gauche sur leur libellé.
+[*]Choisir un maximum de priorité entre 1 et 9. La priorité 1 passe en premier ; 0 désactive le travail.
+[*]Définir des exceptions par sous-tâche et par colon, ou hériter de la dernière valeur appliquée à la catégorie.
+[*]Afficher sur le parent la plus petite priorité non nulle des enfants, avec * si leurs valeurs diffèrent.
+[*]Réordonner les groupes et enfants par glisser-déposer ou avec Monter / Descendre.
+[*]Rendre une sous-tâche autonome et la placer parmi les colonnes principales. Son retour est limité à son groupe d'origine.
+[*]Conserver les priorités effectives de chaque colon lors des changements d'organisation.
+[*]Préparer les changements dans un brouillon, puis Appliquer ou Annuler. Rétablir l'organisation vanilla avec un bouton.
+[*]Repérer le travail en cours grâce au cadre vert sur la tâche visible ou son parent replié.
+[*]Gagner de la place avec les libellés verticaux optionnels. Les barres de défilement apparaissent si le contenu visible déborde.
+[*]Choisir la priorité initiale des nouveaux colons sans modifier les affectations existantes.
+[*]Interface française et anglaise.
+[/list]
+
+[h2]Commandes rapides[/h2]
+[list]
+[*][b]Ctrl + clic gauche sur une catégorie :[/b] afficher ou masquer ses enfants.
+[*][b]Clic gauche / droit dans une cellule :[/b] faire défiler les priorités.
+[*][b]Clic milieu :[/b] choisir directement une valeur dans le menu.
+[*][b]Ctrl + clic droit sur un enfant rattaché :[/b] rétablir son héritage.
+[*][b]Organiser les tâches :[/b] ouvrir l'éditeur à deux listes depuis l'onglet Travail ou les paramètres du mod.
+[/list]
+Modifier le parent applique la valeur choisie à tous ses enfants rattachés et réinitialise leurs exceptions. Un parent désactivé bloque ces enfants. Une tâche extraite reste indépendante.
+
+[h2]Quel ordre de travail ?[/h2]
+Le chiffre de priorité passe d'abord. Pour la sélection ordinaire, l'ordre principal puis le sous-ordre des enfants départagent les tâches à priorité égale. Déplacer une tâche à 6 devant une tâche à 2 ne la rend pas prioritaire. Les passages d'urgence et les ordres forcés gardent leurs règles natives.
+
+L'organisation est commune aux colons d'une partie ; les priorités restent individuelles. Organisation et exceptions sont enregistrées dans la sauvegarde. L'orientation des libellés, le maximum et la valeur initiale des nouveaux colons sont des réglages globaux.
+
+[b]Réduire le maximum :[/b] les chiffres supérieurs sont ramenés au nouveau plafond. Remonter ensuite le maximum ne restaure pas les valeurs précédentes. La valeur par défaut sert uniquement à la première initialisation du travail d'un nouveau colon, pas à la réactivation d'une tâche existante.
+
+[h2]Prérequis et compatibilité[/h2]
+[list]
+[*][b]RimWorld 1.7[/b]
+[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2009463077]Harmony[/url] est requis.
+[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2340773428]Grouped Pawns Lists[/url] est optionnel. Ses commandes de groupe prennent en charge catégories, enfants, tâches autonomes, maximum configuré et deux modes de priorité. Il demande sa propre dépendance RWLayout.
+[*]Avec le regroupement, ordre : Harmony → RWLayout → Grouped Pawns Lists → Work Rework.
+[*][b]Ne pas combiner avec Work Tab.[/b] Les deux mods pilotent le même onglet et la sélection du travail.
+[/list]
+L'intégration Grouped Pawns Lists a été testée par l'utilisateur avec sa version 2.3.2 sous RimWorld 1.7. Les autres gestionnaires de travail ne sont pas validés individuellement. Le périmètre initial de test concerne les colons humains adultes ; les autres populations n'ont pas reçu de validation dédiée.
+
+[h2]Sauvegardes[/h2]
+L'ajout à une partie existante et la sauvegarde/relecture des réglages ont été testés par l'utilisateur. Le retrait du mod et le retour à une version antérieure ne sont pas validés.
+
+[h2]Sources et retours[/h2]
+[url=https://github.com/Diablood/work-rework]Code source et suivi des problèmes[/url] — licence MIT pour le code. Les visuels sont traités séparément dans LICENSING.md.
+Pour signaler un problème, préciser les versions du jeu et du mod, les mods concernés, les étapes de reproduction, les réglages de priorité et l'extrait pertinent du journal.
+
+Inspiré des idées de Work Tab et Complex Jobs. Work Rework est indépendant et n'embarque pas leur code ni leurs DLL.
+La couverture est une illustration promotionnelle des fonctionnalités, pas une capture du jeu.

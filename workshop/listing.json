@@ -1,0 +1,16 @@
+{
+  "title": "Work Rework",
+  "version": "1.0.0",
+  "authorDisplayName": "Diablood",
+  "appId": 294100,
+  "packageId": "diablood.workrework",
+  "github": "https://github.com/Diablood/work-rework",
+  "gitTag": "1.0.0",
+  "summaryEn": "Expand your Work tab: subtask priorities, custom order, standalone tasks and current-work highlighting.",
+  "summaryFr": "Un onglet Travail plus précis : priorités par sous-tâche, ordre personnalisé, tâches autonomes et travail courant visible.",
+  "requiredWorkshopItems": [2009463077],
+  "optionalWorkshopItems": [2340773428],
+  "gameGeneratedTags": ["Mod", "1.7"],
+  "publishedFileId": null,
+  "status": "prepared-for-review"
+}

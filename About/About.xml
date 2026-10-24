@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>Work Rework</name>
+  <author>Diablood</author>
+  <packageId>diablood.workrework</packageId>
+  <modVersion>1.0.0</modVersion>
+  <url>https://github.com/Diablood/work-rework</url>
+  <supportedVersions>
+    <li>1.7</li>
+  </supportedVersions>
+  <modDependencies>
+    <li>
+      <packageId>brrainz.harmony</packageId>
+      <displayName>Harmony</displayName>
+      <steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl>
+    </li>
+  </modDependencies>
+  <loadAfter>
+    <li>brrainz.harmony</li>
+    <li>name.krypt.rimworld.rwlayout.alpha2</li>
+    <li>name.krypt.rimworld.pawntablegrouped</li>
+  </loadAfter>
+  <incompatibleWith>
+    <li>fluffy.worktab</li>
+  </incompatibleWith>
+  <description>Take control of your Work tab. Expand vanilla work categories, set individual subtask priorities, reorder groups and tasks, and turn a subtask into a standalone column.
+
+Configurable maximum priority from 1 to 9, default priority for new colonists, per-pawn overrides, current-work highlighting, optional vertical labels, and save-specific organization with Apply / Cancel and restore-to-vanilla controls. Includes optional integration with Grouped Pawns Lists.
+
+RimWorld 1.7. Requires Harmony. English and French interface. Do not combine with Work Tab. Source code: https://github.com/Diablood/work-rework
+
+Prenez le contrôle de l'onglet Travail : catégories vanilla dépliables, priorités individuelles des sous-tâches, réorganisation des groupes et tâches, et extraction d'une sous-tâche en colonne autonome.
+
+Maximum de priorité réglable de 1 à 9, priorité par défaut des nouveaux colons, exceptions par colon, repère du travail en cours, libellés verticaux optionnels et organisation sauvegardée par partie, avec Appliquer / Annuler et retour au rangement vanilla. Intégration optionnelle de Grouped Pawns Lists.
+
+RimWorld 1.7. Harmony requis. Interface française et anglaise. Ne pas combiner avec Work Tab.</description>
+</ModMetaData>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <Priority5>Priorité 5</Priority5>
+  <Priority6>Priorité 6</Priority6>
+  <Priority7>Priorité 7</Priority7>
+  <Priority8>Priorité 8</Priority8>
+  <Priority9>Priorité 9</Priority9>
+  <WR_TaskMarker>tâche</WR_TaskMarker>
+  <WR_ExplicitPriority>Priorité propre à cette sous-tâche (bordure bleue)</WR_ExplicitPriority>
+  <WR_InheritedPriority>Dernière valeur appliquée au groupe (héritée)</WR_InheritedPriority>
+  <WR_ChildPriorityTip>{0}\nCatégorie : {1}\n{2} : {3}\n\nClic gauche/droit : modifier. Ctrl + clic droit : rétablir l'héritage. Clic milieu : choisir une valeur ou réinitialiser les enfants de cette catégorie pour ce colon.</WR_ChildPriorityTip>
+  <WR_ParentBlocksChildren>Catégorie désactivée : toutes ses sous-tâches sont bloquées. Réactiver la catégorie pour utiliser ou modifier ses sous-tâches.</WR_ParentBlocksChildren>
+  <WR_ParentMixedTip>* : les enfants n'ont pas tous la même priorité. Le chiffre du parent est le plus petit chiffre non nul des enfants. Modifier le parent applique la nouvelle valeur à tous ses enfants et réinitialise leurs exceptions. Clic milieu : choisir directement une valeur.</WR_ParentMixedTip>
+  <WR_UseParentPriority>Hériter de {0} : {1}</WR_UseParentPriority>
+  <WR_PriorityValue>Priorité {0}</WR_PriorityValue>
+  <WR_ResetCategoryChildren>Rétablir tous les enfants de {0} à la valeur de groupe {1} pour ce colon</WR_ResetCategoryChildren>
+  <WR_VerticalLabels>Afficher les noms des tâches à la verticale</WR_VerticalLabels>
+  <WR_VerticalLabelsTip>Tourne les noms des catégories et des sous-tâches de 90° et réduit la largeur des colonnes. Ctrl + clic gauche sur un libellé continue à ouvrir ou fermer ses enfants. Désactiver cette option rétablit l'affichage horizontal.</WR_VerticalLabelsTip>
+  <WR_Expand>Ctrl + clic gauche sur le libellé : afficher les sous-tâches de cette catégorie.</WR_Expand>
+  <WR_Collapse>Ctrl + clic gauche sur le libellé : masquer les sous-tâches de cette catégorie.</WR_Collapse>
+  <WR_ChildHeader>{0}\nCatégorie d'origine : {1}\n\nLes cellules héritent de la catégorie, sauf priorité propre indiquée par une bordure bleue.</WR_ChildHeader>
+  <WR_Enabled>activé</WR_Enabled>
+  <WR_Disabled>désactivé</WR_Disabled>
+  <WR_Organize>Organiser les tâches</WR_Organize>
+  <WR_OrganizationHelp>Sélectionnez un groupe à gauche pour afficher ses enfants à droite. Glissez les lignes dans leur liste pour changer l'ordre, ou utilisez Monter / Descendre. À priorité égale, l'ordre principal puis celui des enfants départagent les tâches (les urgences gardent leur circuit natif).</WR_OrganizationHelp>
+  <WR_MainColumns>Colonnes principales — ordre de gauche à droite</WR_MainColumns>
+  <WR_GroupChildren>Enfants du groupe sélectionné — sous-ordre</WR_GroupChildren>
+  <WR_GroupMarker>groupe</WR_GroupMarker>
+  <WR_StandaloneMarker>autonome</WR_StandaloneMarker>
+  <WR_Extract>Rendre autonome</WR_Extract>
+  <WR_Reintegrate>Réintégrer dans {0}</WR_Reintegrate>
+  <WR_MoveUp>Monter</WR_MoveUp>
+  <WR_MoveDown>Descendre</WR_MoveDown>
+  <WR_Apply>Appliquer</WR_Apply>
+  <WR_Cancel>Annuler</WR_Cancel>
+  <WR_DragWithinList>Glisser la poignée ≡ dans cette liste uniquement. Cliquez sur le nom pour sélectionner. Pour changer de niveau, utilisez Rendre autonome / Réintégrer.</WR_DragWithinList>
+  <WR_StandaloneDetails>{0}\n\nTâche autonome. Sa priorité ne dépend plus du groupe {1}. Elle ne peut être réintégrée que dans ce groupe d'origine.\n\nDéplacez-la dans la liste de gauche pour choisir sa position.</WR_StandaloneDetails>
+  <WR_OrganizationSaveNote>Brouillon jusqu'à Appliquer. Organisation commune aux colons, enregistrée dans cette partie. Les priorités restent individuelles.</WR_OrganizationSaveNote>
+  <WR_OrganizationNeedsGame>Chargez une partie pour organiser ses tâches. L'organisation est propre à chaque sauvegarde.</WR_OrganizationNeedsGame>
+  <WR_StandaloneHeader>{0}\nCatégorie d'origine : {1}\n\nTâche autonome : priorité indépendante de la catégorie d'origine.</WR_StandaloneHeader>
+  <WR_StandalonePriorityTip>{0}\nCatégorie d'origine : {1}\n{2} : {3}\n\nClic gauche/droit : modifier. Clic milieu : choisir une valeur. La catégorie d'origine ne bloque pas cette tâche autonome ; les incapacités du colon restent applicables.</WR_StandalonePriorityTip>
+  <WR_CurrentWork>Travail en cours : {0}\nLe cadre vert indique la tâche actuellement exécutée par ce colon.</WR_CurrentWork>
+  <WR_ResetOrganization>Rétablir l'organisation vanilla</WR_ResetOrganization>
+  <WR_ResetOrganizationTip>Rétablit l'ordre d'origine des catégories et de leurs enfants, et réintègre toutes les tâches autonomes. Les priorités individuelles sont conservées comme lors d'une réintégration. Modifie seulement le brouillon : Appliquer confirme, Annuler abandonne.</WR_ResetOrganizationTip>
+  <WR_MaximumPriority>Priorité maximale (1 à 9)</WR_MaximumPriority>
+  <WR_MaximumPriorityTip>Limite les chiffres accessibles. Appliquer un maximum plus bas ramène les valeurs supérieures à ce plafond dans la partie courante, parents et exceptions compris. Remonter le maximum ne restaure pas les anciens chiffres. Ce réglage global est aussi appliqué au chargement des parties.</WR_MaximumPriorityTip>
+  <WR_InitialPriority>Priorité par défaut des nouveaux colons</WR_InitialPriority>
+  <WR_InitialPriorityTip>Valeur comprise entre 1 et le maximum, initialement 3 comme en vanilla. Utilisée uniquement lors de la première initialisation du travail d'un nouveau colon, pour les tâches que le jeu active. Ne change pas les colons existants ni la valeur à la réactivation d'une tâche. Les tâches initialement désactivées restent à zéro.</WR_InitialPriorityTip>
+  <WR_ApplyPrioritySettings>Appliquer les réglages de priorité</WR_ApplyPrioritySettings>
+  <WR_GroupPriorityTip>{0} colons modifiables dans ce groupe.\nClic gauche/droit : changer la priorité.\nClic milieu : choisir une valeur.\n… : priorités différentes entre colons.\n* : priorités différentes entre sous-tâches.</WR_GroupPriorityTip>
+  <WR_GroupInherit>Rétablir l'héritage des enfants pour les colons concernés</WR_GroupInherit>
+</LanguageData>
