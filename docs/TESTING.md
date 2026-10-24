@@ -474,3 +474,7 @@ Sauvegarde locale avant installation 1.0.1 : artifacts/backups/WorkRework-202610
 ### Mise à jour Workshop signalée — 24 octobre 2026
 
 L'utilisateur confirme « Workshop à jour » après préparation et installation de la 1.0.1. Dernière version envoyée signalée : 1.0.1 sur l'article existant 3826051737. Contrôle local immédiat : About de la copie sous steamapps/workshop/content/294100/3826051737 encore en 1.0.0, sept fichiers sur onze identiques à l'installation locale 1.0.1. Le téléchargement du correctif n'est donc pas encore validé ; aucune conclusion d'échec de l'envoi n'en est tirée. Visibilité privée toujours demandée ; aucun changement Steam par l'agent, pas de nouvelle vérification de la page privée ni des notes de version à ce stade. Le tag 1.0.1 reste sur le commit de livraison ; seul le suivi évolue sur main.
+
+### Téléchargement 1.0.1 vérifié — livraison clôturée
+
+Après confirmation utilisateur « c'est à jour », contrôle de la copie Steam sous workshop/content/294100/3826051737 : About 1.0.1, assembly 1.0.1.0, PublishedFileId 3826051737, inventaire exact des onze fichiers et SHA256 tous identiques aux sources de la livraison 1.0.1. Le téléchargement précédemment resté en 1.0.0 est désormais à jour. Aucun nouveau build, déploiement ou transfert nécessaire. Les validations de comportement restent celles fournies par l'utilisateur avant la livraison ; aucune exécution du jeu par l'agent pour ce contrôle d'intégrité. Visibilité privée toujours demandée et inchangée par l'agent. Livraison 1.0.1 clôturée ; pas de nouveau développement en cours.
