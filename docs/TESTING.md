@@ -412,3 +412,7 @@ Couverture et textes acceptés par l'utilisateur avec demande de retirer les ré
 ### Installation finale 1.0.0 — 24 octobre 2026
 
 Suite au « on continue » utilisateur, paquet final vérifié par check-project.ps1 et prepare-workshop.ps1 -SkipBuild, puis installé par deploy.ps1, jeu fermé. Dix SHA256 installés conformes ; inventaire exact des dix fichiers, sans fichier supplémentaire ni référence GitHub dans les textes livrés. About 1.0.0 et assembly 1.0.0.0 vérifiés. Sauvegarde de la 0.6.2 : artifacts/backups/WorkRework-20261024-105548-9946744.zip. Aucun réglage ni sauvegarde de partie modifié. Dernier contrôle utilisateur à faire : version dans RimSort, démarrage sans erreur et onglet Travail. Aucun lancement de jeu ni upload Steam par l'agent.
+
+### Validation utilisateur finale 1.0.0 — 24 octobre 2026
+
+Réponses explicites au formulaire interactif : RimSort affiche bien 1.0.0 — Oui, validé ; démarrage sans erreur liée à Work Rework — Oui, validé ; en partie, onglet Travail, priorités, dépliages et groupes — Oui, validé. Ces trois contrôles sont rapportés par l'utilisateur, pas exécutés par l'agent. Version finale acceptée pour l'étape de publication. Couverture et textes déjà acceptés, sans référence publique GitHub. Aucun upload Steam effectué ; visibilité et autorisation d'envoi restent à définir.

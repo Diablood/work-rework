@@ -28,7 +28,7 @@ Ne pas sélectionner le checkout de développement comme dossier d'envoi. Le cod
 ## Checklist avant le premier envoi — à valider avec le créateur
 
 - [x] Couverture, titre et présentation FR/EN acceptés par l'utilisateur ; liens vers le dépôt retirés à sa demande.
-- [ ] Version 1.0.0 visible dans le jeu / RimSort et démarrage sans erreur liée au mod.
+- [x] Version 1.0.0 visible dans RimSort, démarrage sans erreur et fonctionnement en partie validés par les trois réponses utilisateur.
 - [x] Build final, contrats, aperçu et manifeste de fichiers conformes (voir docs/TESTING.md).
 - [ ] Harmony est le seul élément requis ; Grouped Pawns Lists reste optionnel. Ses utilisateurs installent également RWLayout.
 - [ ] Choix de la visibilité Steam confirmé et contrôle des réglages de visibilité lors de la mise en place de la page.
