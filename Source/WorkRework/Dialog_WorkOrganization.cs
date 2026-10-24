@@ -123,7 +123,7 @@ internal sealed class Dialog_WorkOrganization : Window
                 else if (!roots) selectedChild = item;
             }
             Widgets.Label(new Rect(5f, row.y + 8f, 24f, 26f), "≡");
-            string label = roots ? Label(item) : WorkCatalog.Giver(item)!.LabelCap.ToString();
+            string label = roots ? Label(item) : WorkCatalog.TaskLabel(WorkCatalog.Giver(item)!);
             string marker = roots ? (item.StartsWith("G:", StringComparison.Ordinal) ? "WR_GroupMarker" : "WR_StandaloneMarker").Translate().ToString() : "WR_TaskMarker".Translate().ToString();
             Text.Font = GameFont.Small;
             Widgets.Label(new Rect(32f, row.y + 1f, row.width - 36f, 23f), label.Truncate(row.width - 36f));
@@ -132,7 +132,10 @@ internal sealed class Dialog_WorkOrganization : Window
             Widgets.Label(new Rect(32f, row.y + 22f, row.width - 36f, 18f), marker);
             GUI.color = Color.white;
             Text.Font = GameFont.Small;
-            TooltipHandler.TipRegion(row, label + "\n" + "WR_DragWithinList".Translate());
+            string tip = label + "\n" + "WR_DragWithinList".Translate();
+            if (Prefs.DevMode)
+                tip += "\n\n" + (roots && item.StartsWith("G:", StringComparison.Ordinal) ? "WorkTypeDef: " : "WorkGiverDef: ") + (roots ? item[2..] : item);
+            TooltipHandler.TipRegion(row, tip);
             ReorderableWidget.Reorderable(group, row);
         }
         Widgets.EndScrollView();
@@ -149,5 +152,5 @@ internal sealed class Dialog_WorkOrganization : Window
     }
 
     private static string Label(string root) => root.StartsWith("G:", StringComparison.Ordinal)
-        ? WorkCatalog.CategoryLabel(WorkCatalog.Type(root[2..])!) : WorkCatalog.Giver(root[2..])!.LabelCap.ToString();
+        ? WorkCatalog.CategoryLabel(WorkCatalog.Type(root[2..])!) : WorkCatalog.TaskLabel(WorkCatalog.Giver(root[2..])!);
 }

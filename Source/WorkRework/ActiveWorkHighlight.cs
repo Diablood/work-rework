@@ -31,6 +31,6 @@ internal static class ActiveWorkHighlight
             Widgets.DrawBox(box.ContractedBy(-2f), 2);
         }
         finally { GUI.color = previous; }
-        TooltipHandler.TipRegion(box, "WR_CurrentWork".Translate(giver.LabelCap));
+        TooltipHandler.TipRegion(box, "WR_CurrentWork".Translate(WorkCatalog.TaskLabel(giver)));
     }
 }

@@ -93,7 +93,7 @@ internal sealed class WorkTableView
             columns[giver] = result = new WorkGiverColumnDef
             {
                 defName = $"WorkRework_View_{giver.workType.defName}_{giver.defName}",
-                label = giver.label,
+                label = WorkCatalog.TaskLabel(giver),
                 workType = giver.workType,
                 Giver = giver,
                 workerClass = typeof(PawnColumnWorker_WorkGiverPreview),

@@ -22,8 +22,8 @@ public sealed class PawnColumnWorker_WorkGiverPreview : PawnColumnWorker
     {
         if (WorkReworkMod.VerticalLabels)
         {
-            VerticalWorkHeaders.DrawLabel(rect, Giver.LabelCap.ToString(), inherited: !WorkCatalog.Standalone(Giver));
-            TooltipHandler.TipRegion(rect, (WorkCatalog.Standalone(Giver) ? "WR_StandaloneHeader" : "WR_ChildHeader").Translate(Giver.LabelCap, def.workType.LabelCap));
+            VerticalWorkHeaders.DrawLabel(rect, WorkCatalog.TaskLabel(Giver), inherited: !WorkCatalog.Standalone(Giver));
+            TooltipHandler.TipRegion(rect, (WorkCatalog.Standalone(Giver) ? "WR_StandaloneHeader" : "WR_ChildHeader").Translate(WorkCatalog.TaskLabel(Giver), WorkCatalog.CategoryLabel(def.workType)));
             return;
         }
         GameFont oldFont = Text.Font;
@@ -36,23 +36,23 @@ public sealed class PawnColumnWorker_WorkGiverPreview : PawnColumnWorker
                 Text.Font = GameFont.Small;
                 Text.Anchor = TextAnchor.MiddleCenter;
                 GUI.color = Color.white;
-                Vector2 size = Text.CalcSize(Giver.LabelCap);
+                Vector2 size = Text.CalcSize(WorkCatalog.TaskLabel(Giver));
                 Rect label = new(rect.center.x - size.x / 2f, rect.y + (def.moveWorkTypeLabelDown ? 20f : 0f), size.x, size.y);
-                Widgets.Label(label, Giver.LabelCap);
+                Widgets.Label(label, WorkCatalog.TaskLabel(Giver));
                 GUI.color = new Color(1f, 1f, 1f, 0.3f);
                 Widgets.DrawLineVertical(label.center.x, label.yMax - 3f, rect.y + 50f - label.yMax + 3f);
                 Widgets.DrawLineVertical(label.center.x + 1f, label.yMax - 3f, rect.y + 50f - label.yMax + 3f);
-                TooltipHandler.TipRegion(label, "WR_StandaloneHeader".Translate(Giver.LabelCap, def.workType.LabelCap));
+                TooltipHandler.TipRegion(label, "WR_StandaloneHeader".Translate(WorkCatalog.TaskLabel(Giver), WorkCatalog.CategoryLabel(def.workType)));
                 return;
             }
             Text.Font = GameFont.Tiny;
             Text.Anchor = TextAnchor.MiddleCenter;
             GUI.color = Color.white;
-            Widgets.Label(new Rect(rect.x + 3f, rect.y, rect.width - 6f, rect.height - 20f), Giver.LabelCap);
+            Widgets.Label(new Rect(rect.x + 3f, rect.y, rect.width - 6f, rect.height - 20f), WorkCatalog.TaskLabel(Giver));
             Text.Anchor = TextAnchor.LowerCenter;
             GUI.color = Color.gray;
             Widgets.Label(new Rect(rect.x, rect.yMax - 20f, rect.width, 18f), (WorkCatalog.Standalone(Giver) ? "WR_StandaloneMarker" : "WR_TaskMarker").Translate());
-            TooltipHandler.TipRegion(rect, (WorkCatalog.Standalone(Giver) ? "WR_StandaloneHeader" : "WR_ChildHeader").Translate(Giver.LabelCap, def.workType.LabelCap));
+            TooltipHandler.TipRegion(rect, (WorkCatalog.Standalone(Giver) ? "WR_StandaloneHeader" : "WR_ChildHeader").Translate(WorkCatalog.TaskLabel(Giver), WorkCatalog.CategoryLabel(def.workType)));
         }
         finally
         {
@@ -125,7 +125,7 @@ public sealed class PawnColumnWorker_WorkGiverPreview : PawnColumnWorker
             GUI.color = Color.white;
             string value = manualPriorities ? raw.ToString() : (raw > 0 ? "WR_Enabled" : "WR_Disabled").Translate().ToString();
             string origin = (standalone ? "WR_StandaloneMarker" : explicitPriority.HasValue ? "WR_ExplicitPriority" : "WR_InheritedPriority").Translate().ToString();
-            string tip = (standalone ? "WR_StandalonePriorityTip" : "WR_ChildPriorityTip").Translate(Giver.LabelCap, def.workType.LabelCap, origin, value);
+            string tip = (standalone ? "WR_StandalonePriorityTip" : "WR_ChildPriorityTip").Translate(WorkCatalog.TaskLabel(Giver), WorkCatalog.CategoryLabel(def.workType), origin, value);
             if (parentDisabled)
                 tip += "\n\n" + "WR_ParentBlocksChildren".Translate();
             if (disabled && manualPriorities)

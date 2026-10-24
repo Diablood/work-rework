@@ -18,6 +18,15 @@ internal static class WorkCatalog
     internal static string CategoryLabel(WorkTypeDef type) => !string.IsNullOrWhiteSpace(type.labelShort)
         ? type.labelShort.CapitalizeFirst()
         : !string.IsNullOrWhiteSpace(type.label) ? type.LabelCap.ToString() : type.defName;
+    internal static string TaskLabel(WorkGiverDef giver)
+    {
+        string label = giver.LabelCap.ToString();
+        if (!string.IsNullOrWhiteSpace(label)) return label;
+        // Some loaded defs/translations have no label but still supply job text.
+        if (!string.IsNullOrWhiteSpace(giver.verb)) return giver.verb.CapitalizeFirst();
+        if (!string.IsNullOrWhiteSpace(giver.gerund)) return giver.gerund.CapitalizeFirst();
+        return giver.defName;
+    }
     internal static bool Standalone(WorkGiverDef giver) => WorkPriorityComponent.Current?.Layout.IsStandalone(giver.defName) == true;
     internal static IEnumerable<WorkGiverDef> Children(WorkTypeDef type) => WorkPriorityComponent.Current is { } component
         ? component.Layout.Children[type.defName].Select(Giver).OfType<WorkGiverDef>() : type.workGiversByPriority;

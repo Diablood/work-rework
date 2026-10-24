@@ -17,8 +17,8 @@ internal static class VerticalWorkHeaders
             AccessTools.Method(typeof(PawnColumnWorker_WorkPriority), "HeaderClicked", new[] { typeof(Rect), typeof(PawnTable) }));
 
     internal static string Label(PawnColumnDef column) => column is WorkGiverColumnDef child
-        ? child.Giver.LabelCap.ToString()
-        : column.workType.labelShort.CapitalizeFirst();
+        ? WorkCatalog.TaskLabel(child.Giver)
+        : WorkCatalog.CategoryLabel(column.workType);
 
     internal static float Measure(string label)
     {

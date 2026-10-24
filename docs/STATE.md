@@ -74,3 +74,13 @@ Correction limitée à Dialog_WorkOrganization et WorkCatalog.CategoryLabel : la
 Correctif compilé : zéro avertissement/erreur, 321 assertions et contrats réussis, ZIP conforme. deploy.ps1 a refusé l'installation avant toute écriture car RimWorld est ouvert ; demander sa fermeture via le formulaire déjà envoyé puis relancer le déploiement. Version installée et Workshop inchangés. Validation visuelle utilisateur encore attendue.
 
 Correctif local installé après fermeture confirmée : Mods/WorkRework, onze SHA256 conformes, PublishedFileId conservé. Le dossier local précédent était absent (pas de nouveau backup) ; copie Workshop inchangée et distincte. Tester avec la copie locale sélectionnée dans RimSort, sans activer les deux copies ensemble. Version 1.0.0 conservée ; attente du formulaire visuel.
+
+### Second cas — enfant de Médecin sans nom
+
+Retour utilisateur : noms de catégories corrigés, mais le premier enfant de Médecin est sans nom à la fois dans Travail et dans Organiser les tâches. Le second contrôle du formulaire ne désignait donc pas un échec confirmé du bouton de réintégration. L'identité exacte du WorkGiverDef chargé n'est pas encore connue ; ne pas l'attribuer à un mod précis. Les XML et traductions françaises locaux de DoctorTendEmergency sont renseignés, donc leur seule lecture ne reproduit pas le défaut chargé en partie.
+
+API locale vérifiée par ILSpy : Def.LabelCap renvoie null si label vide ; WorkGiverDef fournit verb et gerund traduisibles. WorkCatalog.TaskLabel conserve LabelCap lorsqu'il est présent, sinon utilise verb, gerund, puis defName. Fonction utilisée dans les deux listes de l'éditeur, détails des autonomes, en-têtes enfants/autonomes horizontaux et verticaux, mesure de hauteur, colonnes locales et infobulles du travail courant/priorités. Catégories dans les infobulles alignées sur CategoryLabel. Aucun changement des Defs originaux ou des données de jeu.
+
+Pour identifier le cas si le rendu reste vide malgré un label non vide, l'infobulle de l'éditeur affiche WorkGiverDef / WorkTypeDef et le defName uniquement lorsque Prefs.DevMode est actif. Pas de journalisation par frame, aucun changement de préférences par l'agent. L'utilisateur confirme le jeu fermé et autorise l'installation locale. Version/tag conservés, aucun upload Workshop.
+
+Second correctif installé localement après build/tests réussis (321 assertions et contrats), onze SHA256 conformes. Backup artifacts/backups/WorkRework-20261024-114936-9786239.zip. Attente du contrôle visuel de l'enfant Médecin ; diagnostic defName en mode développeur si nécessaire. Workshop inchangé.
