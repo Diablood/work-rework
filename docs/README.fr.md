@@ -40,5 +40,4 @@ Grouped Pawns Lists est optionnel. Avec lui : **Harmony → RWLayout → Grouped
 
 Organisation et exceptions sont sauvegardées par partie ; le dépliage des catégories reste temporaire. L'ajout à une partie existante et la sauvegarde/relecture ont été testés par l'utilisateur. Retrait et rétrogradation non validés. Périmètre initial : colons humains adultes ; autres populations sans validation dédiée.
 
-Sources et problèmes : https://github.com/Diablood/work-rework
 Code sous MIT ; visuels traités séparément dans `LICENSING.md`.

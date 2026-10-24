@@ -179,7 +179,7 @@ Complex Jobs reste une référence et une cible possible, sans être une dépend
 - [x] Choix utilisateur : version et tag exacts 1.0.0, dépôt GitHub existant et licence MIT.
 - [x] Préparer couverture, descriptions et note de publication FR/EN ; préserver ModIcon.png.
 - [x] Préparer un paquet Workshop propre, distinct du checkout, avec contrôle des empreintes.
-- [ ] Approbation du visuel et des textes par l'utilisateur.
+- [x] Approbation du visuel et des textes par l'utilisateur ; références GitHub retirées à sa demande.
 - [ ] Publication Steam explicitement autorisée et réalisée, puis conservation du PublishedFileId.
 
 Les contrôles de compilation et le statut de sauvegarde GitHub sont consignés dans TESTING.md. Aucune nouvelle compatibilité n'est en cours.

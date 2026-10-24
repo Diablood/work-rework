@@ -47,8 +47,8 @@ The Grouped Pawns Lists integration was user-tested with version 2.3.2 on RimWor
 [h2]Saves[/h2]
 Adding the mod to an existing save and saving/reloading its settings were user-tested. Removal and downgrades have not been validated.
 
-[h2]Source and feedback[/h2]
-[url=https://github.com/Diablood/work-rework]Source code and issue tracker[/url] — MIT license for code. Visual assets are separate; see LICENSING.md.
+[h2]Feedback and license[/h2]
+MIT license for code. Visual assets are separate; see LICENSING.md.
 For a bug report, include the RimWorld and mod versions, the relevant mods, steps to reproduce, your priority settings and the relevant log excerpt.
 
 Inspired by the ideas of Work Tab and Complex Jobs. Work Rework is an independent mod and does not bundle their code or binaries.

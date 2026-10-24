@@ -47,8 +47,8 @@ L'intégration Grouped Pawns Lists a été testée par l'utilisateur avec sa ver
 [h2]Sauvegardes[/h2]
 L'ajout à une partie existante et la sauvegarde/relecture des réglages ont été testés par l'utilisateur. Le retrait du mod et le retour à une version antérieure ne sont pas validés.
 
-[h2]Sources et retours[/h2]
-[url=https://github.com/Diablood/work-rework]Code source et suivi des problèmes[/url] — licence MIT pour le code. Les visuels sont traités séparément dans LICENSING.md.
+[h2]Retours et licence[/h2]
+Licence MIT pour le code. Les visuels sont traités séparément dans LICENSING.md.
 Pour signaler un problème, préciser les versions du jeu et du mod, les mods concernés, les étapes de reproduction, les réglages de priorité et l'extrait pertinent du journal.
 
 Inspiré des idées de Work Tab et Complex Jobs. Work Rework est indépendant et n'embarque pas leur code ni leurs DLL.

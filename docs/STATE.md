@@ -44,3 +44,7 @@ Décision utilisateur : le périmètre initial est atteint ; version et tag exac
 Aucun changement de logique de jeu depuis 0.6.2 : version, message de chargement, présentation publique et outillage de paquet changent. Icône utilisateur conservée. Couverture About/Preview.png, descriptions et note de première publication FR/EN sous workshop/. build.ps1 et deploy.ps1 utilisent tools/package-files.json (dix fichiers). prepare-workshop.ps1 produit un dossier propre avec manifeste SHA256 adjacent ; ne jamais envoyer le checkout de développement sur Steam. Les décompilations et dépendances restent dans artifacts/ et hors Git.
 
 Installation Mods inchangée (0.6.2 validée). La préparation et le dépôt GitHub ne constituent pas un envoi Workshop : couverture et textes à relire avant publication Steam. Les résultats de contrôle 1.0.0 sont consignés dans TESTING.md.
+
+### Relecture acceptée — références publiques
+
+Couverture validée et texte accepté par l'utilisateur, sous réserve du retrait des références à son GitHub. Liens supprimés des descriptions Workshop FR/EN, des métadonnées About (URL et description), du README livré, du guide français et de la fiche de préparation. Le dépôt reste la destination de sauvegarde interne. Version conservée à 1.0.0 ; le tag déjà poussé n'est pas réécrit. La correction de présentation est sauvegardée dans un nouveau commit sur main. Aucun envoi Steam autorisé ou effectué par ce seul accord sur les textes.

@@ -27,7 +27,7 @@ Ne pas sélectionner le checkout de développement comme dossier d'envoi. Le cod
 
 ## Checklist avant le premier envoi — à valider avec le créateur
 
-- [ ] Couverture, titre et présentation FR/EN acceptés.
+- [x] Couverture, titre et présentation FR/EN acceptés par l'utilisateur ; liens vers le dépôt retirés à sa demande.
 - [ ] Version 1.0.0 visible dans le jeu / RimSort et démarrage sans erreur liée au mod.
 - [x] Build final, contrats, aperçu et manifeste de fichiers conformes (voir docs/TESTING.md).
 - [ ] Harmony est le seul élément requis ; Grouped Pawns Lists reste optionnel. Ses utilisateurs installent également RWLayout.
@@ -51,4 +51,4 @@ Dans le code local inspecté, l'uploader ne remplace la description que lors de 
 - Installation locale 1.7.4985 rev1269 : `ModMetaData.PreviewImagePath` attend `About/Preview.png`, `GetWorkshopUploadDirectory` retourne le dossier du mod, et `Workshop.SetWorkshopItemDataFrom` fixe les données d'envoi.
 - [Steamworks — SetItemPreview et limite de l'aperçu](https://partner.steamgames.com/doc/api/ISteamUGC#SetItemPreview) ; la documentation des résultats d'envoi précise la limite inférieure à 1 Mo.
 - [Steamworks — processus d'envoi d'un item](https://partner.steamgames.com/doc/features/workshop/implementation#UploadingAWorkshopItem).
-- [Dépôt source et licence existante](https://github.com/Diablood/work-rework).
+- Licence existante conservée dans `../LICENSE`.

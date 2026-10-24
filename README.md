@@ -6,7 +6,7 @@
 
 Take control of the Work tab: expand vanilla categories, set individual subtask priorities, reorder work and turn a task into a standalone column.
 
-[Guide français](https://github.com/Diablood/work-rework/blob/main/docs/README.fr.md) · [Source and issues](https://github.com/Diablood/work-rework) · [MIT license](LICENSE)
+[MIT license](LICENSE)
 
 ## Features
 
@@ -50,10 +50,7 @@ Adding the mod to an existing save and saving/reloading settings were user-teste
 
 ## Development and publication
 
-- [Build, tests and local deployment](https://github.com/Diablood/work-rework/blob/main/docs/DEVELOPMENT.md)
-- [Workshop preparation, texts and review checklist](https://github.com/Diablood/work-rework/blob/main/workshop/README.md)
-- [Changelog](https://github.com/Diablood/work-rework/blob/main/CHANGELOG.md)
-- [Validation records](https://github.com/Diablood/work-rework/blob/main/docs/TESTING.md)
+The development checkout includes build instructions, validation records and Workshop preparation documents.
 
 The complete feature set was accepted by the user through version 0.6.2. Version **1.0.0** is the first complete release, prepared from that baseline. Steam publication is a separate action; this repository does not imply that a Workshop item has already been published.
 

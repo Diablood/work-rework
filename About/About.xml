@@ -4,7 +4,6 @@
   <author>Diablood</author>
   <packageId>diablood.workrework</packageId>
   <modVersion>1.0.0</modVersion>
-  <url>https://github.com/Diablood/work-rework</url>
   <supportedVersions>
     <li>1.7</li>
   </supportedVersions>
@@ -27,7 +26,7 @@
 
 Configurable maximum priority from 1 to 9, default priority for new colonists, per-pawn overrides, current-work highlighting, optional vertical labels, and save-specific organization with Apply / Cancel and restore-to-vanilla controls. Includes optional integration with Grouped Pawns Lists.
 
-RimWorld 1.7. Requires Harmony. English and French interface. Do not combine with Work Tab. Source code: https://github.com/Diablood/work-rework
+RimWorld 1.7. Requires Harmony. English and French interface. Do not combine with Work Tab.
 
 Prenez le contrôle de l'onglet Travail : catégories vanilla dépliables, priorités individuelles des sous-tâches, réorganisation des groupes et tâches, et extraction d'une sous-tâche en colonne autonome.
 
