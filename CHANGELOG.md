@@ -1,6 +1,6 @@
 # Historique
 
-## Correctif local en validation — priorité des colons de départ
+## Correctif local validé — priorité des colons de départ
 
 - Le réglage de priorité par défaut s'applique aussi aux affectations que RimWorld redistribue juste avant la génération de la carte ; il n'est plus remplacé par 3 lors du lancement d'une nouvelle partie.
 - Correction limitée aux colons sélectionnés pour le départ pendant cette préparation. Le choix des tâches actives reste natif ; tâches inactives, parties existantes et réactivation conservées.
