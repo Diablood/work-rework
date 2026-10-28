@@ -40,7 +40,8 @@ internal static class PriorityRangePatch
     {
         WorkPriorityComponent.Current?.EnsureStandalone(___pawn);
         if (___pawn.RaceProps.Humanlike)
-            priority = PriorityRules.InitialAssignment(priority, WorkReworkMod.MaximumPriority, PawnWorkInitializationScope.NewPawn, WorkReworkMod.InitialPriority);
+            priority = PriorityRules.InitialAssignment(priority, WorkReworkMod.MaximumPriority,
+                PawnWorkInitializationScope.NewPawn || StartingPawnPriorityScope.Pawns?.Contains(___pawn) == true, WorkReworkMod.InitialPriority);
     }
     private static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions) => PriorityTranspilers.ExtendRange(instructions, 1, configurable: false);
     private static void Postfix(Pawn ___pawn, WorkTypeDef w)

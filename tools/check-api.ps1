@@ -21,7 +21,7 @@ try {
     }
     $flags = [System.Reflection.BindingFlags]'Public,NonPublic,Instance,Static,DeclaredOnly'
     $patchTypes = @($mod.GetTypes() | Where-Object { $_.GetCustomAttributesData().AttributeType.FullName -contains 'HarmonyLib.HarmonyPatch' })
-    if ($patchTypes.Count -ne 24) { throw "Expected 24 patch classes, found $($patchTypes.Count)." }
+    if ($patchTypes.Count -ne 25) { throw "Expected 25 patch classes, found $($patchTypes.Count)." }
     foreach ($patchType in $patchTypes) {
         $patchAttribute = $patchType.GetCustomAttributesData() | Where-Object { $_.AttributeType.FullName -eq 'HarmonyLib.HarmonyPatch' }
         $targetTypeName = $patchAttribute.ConstructorArguments[0].Value.FullName
@@ -55,6 +55,11 @@ try {
     }
     $windowType = $game.GetType('RimWorld.MainTabWindow_PawnTable', $true)
     $workerType = $game.GetType('RimWorld.PawnColumnWorker_WorkPriority', $true)
+    $startingPawns = $game.GetType('Verse.GameInitData', $true).GetField('startingAndOptionalPawns', $flags)
+    if ($null -eq $startingPawns -or $startingPawns.FieldType.GetGenericTypeDefinition().FullName -ne 'System.Collections.Generic.List`1' -or
+        $startingPawns.FieldType.GenericTypeArguments[0].FullName -ne 'Verse.Pawn') {
+        throw 'Starting-pawn work initialization scope contract changed.'
+    }
     $labelRect = $workerType.GetMethod('GetLabelRect', $flags)
     if ($null -eq $labelRect -or $labelRect.ReturnType.FullName -ne 'UnityEngine.Rect' -or
         $labelRect.GetParameters().Count -ne 1 -or $labelRect.GetParameters()[0].ParameterType.FullName -ne 'UnityEngine.Rect') {

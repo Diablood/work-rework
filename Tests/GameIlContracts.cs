@@ -21,7 +21,22 @@ internal static class GameIlContracts
         var scanner = Read("RimWorld", "JobGiver_Work", "TryIssueJobPackage");
         int fields = scanner.Count(instruction => instruction.Op == OpCodes.Ldfld && FieldName(instruction.Operand) == "priorityInType");
         if (fields != 2) throw new Exception($"Scanner IL contract: expected 2 priorityInType reads, found {fields}");
-        Console.WriteLine("Game IL contracts: three range boundaries and two scanner field reads verified without loading game code.");
+        var starting = Read("Verse", "GameInitData", "PrepForMapGen");
+        int assignments = 0;
+        int disabled = 0;
+        for (int i = 0; i < starting.Count; i++)
+        {
+            if (starting[i].Op != OpCodes.Call && starting[i].Op != OpCodes.Callvirt) continue;
+            string? called = MethodName(starting[i].Operand);
+            if (called == "DisableAll") disabled++;
+            if (called != "SetPriority") continue;
+            if (i == 0 || starting[i - 1].Op != OpCodes.Ldc_I4_3)
+                throw new Exception("Starting-pawn assignment no longer uses the native priority 3.");
+            assignments++;
+        }
+        if (assignments != 3 || disabled != 1)
+            throw new Exception($"Starting-pawn assignment contract changed: {assignments} assignments, {disabled} resets.");
+        Console.WriteLine("Game IL contracts: three range boundaries, two scanner field reads and starting-pawn reset/three default assignments verified without loading game code.");
 
         void CheckConstants(string ns, string type, string method, int expected)
         {
@@ -35,6 +50,17 @@ internal static class GameIlContracts
                 if (four && (next.FlowControl == FlowControl.Cond_Branch || next.Name?.StartsWith("stloc", StringComparison.Ordinal) == true)) count++;
             }
             if (count != expected) throw new Exception($"{type}.{method}: expected {expected} priority-4 constants, found {count}");
+        }
+
+        string? MethodName(int token)
+        {
+            EntityHandle handle = MetadataTokens.EntityHandle(token);
+            return handle.Kind switch
+            {
+                HandleKind.MethodDefinition => metadata.GetString(metadata.GetMethodDefinition((MethodDefinitionHandle)handle).Name),
+                HandleKind.MemberReference => metadata.GetString(metadata.GetMemberReference((MemberReferenceHandle)handle).Name),
+                _ => null
+            };
         }
 
         string? FieldName(int token)

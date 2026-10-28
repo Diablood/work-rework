@@ -45,7 +45,7 @@
   <WR_MaximumPriority>Maximum priority (1 to 9)</WR_MaximumPriority>
   <WR_MaximumPriorityTip>Limits available numbers. Applying a lower maximum reduces higher values to this cap in the current game, including parents and overrides. Raising it again does not recover previous numbers. This global setting is also enforced when loading games.</WR_MaximumPriorityTip>
   <WR_InitialPriority>Default priority for new colonists</WR_InitialPriority>
-  <WR_InitialPriorityTip>A value between 1 and the maximum, initially 3 as in vanilla. Used only on a new pawn's first work initialization, for tasks the game enables. Does not change existing pawns or the value used when reactivating a task. Initially disabled tasks stay at zero.</WR_InitialPriorityTip>
+  <WR_InitialPriorityTip>A value between 1 and the maximum, initially 3 as in vanilla. Used for work the game enables for starting colonists and during new pawns' first work initialization. Does not change pawns in existing saves or the value used when reactivating a task. Initially disabled tasks stay at zero.</WR_InitialPriorityTip>
   <WR_ApplyPrioritySettings>Apply priority settings</WR_ApplyPrioritySettings>
   <WR_GroupPriorityTip>{0} editable pawns in this group.\nLeft/right click: change priority.\nMiddle click: choose a value.\n…: different priorities between pawns.\n*: different priorities between subtasks.</WR_GroupPriorityTip>
   <WR_GroupInherit>Restore child inheritance for eligible pawns</WR_GroupInherit>

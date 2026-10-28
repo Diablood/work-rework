@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using HarmonyLib;
 using RimWorld;
 using Verse;
@@ -9,6 +10,24 @@ internal static class PawnWorkInitializationScope
 {
     [System.ThreadStatic] internal static int Depth;
     [System.ThreadStatic] internal static bool NewPawn;
+}
+
+internal static class StartingPawnPriorityScope
+{
+    [System.ThreadStatic] internal static List<Pawn>? Pawns;
+}
+
+[HarmonyPatch(typeof(GameInitData), nameof(GameInitData.PrepForMapGen))]
+internal static class StartingPawnPrioritiesPatch
+{
+    private static void Prefix(GameInitData __instance, out List<Pawn>? __state)
+    {
+        __state = StartingPawnPriorityScope.Pawns;
+        // Keep the live list: vanilla removes optional, unselected pawns first.
+        StartingPawnPriorityScope.Pawns = __instance.startingAndOptionalPawns;
+    }
+
+    private static void Finalizer(List<Pawn>? __state) => StartingPawnPriorityScope.Pawns = __state;
 }
 
 [HarmonyPatch(typeof(Pawn_WorkSettings), nameof(Pawn_WorkSettings.EnableAndInitialize))]

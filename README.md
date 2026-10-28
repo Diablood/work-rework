@@ -44,7 +44,7 @@ Organization and per-pawn subtask overrides are saved with the game. Expanded/co
 
 Changing the maximum requires **Apply priority settings**. A lower maximum reduces higher stored values to the new limit, including group bases and overrides; raising it later does not recover the old values. The limit is also applied when loading a game.
 
-The default priority starts at 3 and is used only on a new pawn's first work initialization, for the tasks the game activates. It does not activate every work category or change an already-initialized pawn, including an existing world pawn being recruited. Reactivating a task keeps its existing cycling/checkbox behavior.
+The default priority starts at 3 and is used for the tasks the game activates for starting colonists when preparing a new map, and on other new pawns' first work initialization. It does not activate every work category or change an already-initialized pawn in an existing save, including an existing world pawn being recruited. Reactivating a task keeps its existing cycling/checkbox behavior.
 
 Adding the mod to an existing save and saving/reloading settings were user-tested. Removal and downgrades have not been validated. The initial test scope is adult human colonists; other populations have not received dedicated validation.
 

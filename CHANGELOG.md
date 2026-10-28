@@ -1,5 +1,11 @@
 # Historique
 
+## Correctif local en validation — priorité des colons de départ
+
+- Le réglage de priorité par défaut s'applique aussi aux affectations que RimWorld redistribue juste avant la génération de la carte ; il n'est plus remplacé par 3 lors du lancement d'une nouvelle partie.
+- Correction limitée aux colons sélectionnés pour le départ pendant cette préparation. Le choix des tâches actives reste natif ; tâches inactives, parties existantes et réactivation conservées.
+- Aide FR/EN précisée. Aucun changement de version ou de tag, aucun envoi Workshop pour ce candidat local.
+
 ## 1.0.1 — libellés de l'organisation et infobulles
 
 - L'éditeur utilise maintenant le même libellé court de catégorie que l'onglet Travail. Les WorkTypeDefs de mods ou DLC sans champ label générique ne produisent plus de lignes sans nom.
