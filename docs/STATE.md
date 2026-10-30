@@ -134,3 +134,5 @@ Nouveau SlaveEnrollmentPriorityScope, temporaire et limité au pion concerné : 
 Build final du correctif des nouveaux esclaves réussi : 321 assertions, 26 cibles Harmony et contrats natifs/optionnels conformes, paquet onze fichiers vérifié. Fermeture du jeu demandée ; installation et validation en attente. Aucun envoi Workshop.
 
 Correctif des nouveaux esclaves installé après fermeture confirmée : copie locale Mods/WorkRework, onze SHA256 conformes. Dossier local précédent absent (pas de nouveau backup) ; Workshop inchangé. Sélectionner la copie locale pour les tests d'un nouvel asservissement et de la conservation des affectations d'un esclave déjà présent. Validation utilisateur en attente.
+
+Correctif des nouveaux esclaves validé : priorité 5 et interdictions conservées lors d'un nouvel asservissement ; priorités personnalisées des esclaves déjà présents conservées au rechargement. Les deux correctifs de priorité initiale (départ et esclaves) sont acceptés localement. Aucun nouveau build/déploiement nécessaire. Candidat local 1.0.1, tag et Workshop inchangés ; attente d'une demande de préparation de livraison.

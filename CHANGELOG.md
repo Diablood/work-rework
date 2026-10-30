@@ -1,6 +1,6 @@
 # Historique
 
-## Correctif local en validation — priorité des nouveaux esclaves
+## Correctif local validé — priorité des nouveaux esclaves
 
 - La valeur par défaut s'applique lors de l'arrivée d'un nouvel esclave lorsque le changement de faction réinitialise son travail, y compris après emprisonnement.
 - Les affectations des esclaves déjà présents ne sont pas modifiées ; le choix natif des tâches et les interdictions du statut sont conservés.
