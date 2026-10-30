@@ -30,6 +30,8 @@ Maximum réglable de 1 à 9, initialement 9. **Appliquer les réglages de priori
 
 La priorité par défaut, initialement 3, concerne les tâches activées pour les colons de départ lors de la préparation d'une nouvelle carte, puis la première initialisation du travail des autres nouveaux colons. Les tâches que le jeu laisse inactives restent à zéro. Les colons déjà initialisés d'une partie existante, y compris ceux déjà présents dans le monde avant recrutement, restent inchangés. La réactivation d'une tâche ne force pas ce défaut.
 
+Un nouveau pion rejoignant la colonie comme esclave reçoit également ce défaut lorsque son changement de faction réinitialise son travail. Les esclaves déjà présents conservent leurs affectations et les tâches interdites par leur statut restent désactivées.
+
 Libellés verticaux optionnels, alignés sur le bas. Un cadre vert identifie le travail en cours : enfant déplié, parent replié ou colonne autonome. Une activité sans fournisseur identifiable n'allume aucune colonne. Les barres n'apparaissent que si le contenu visible déborde.
 
 ## Installation et compatibilité

@@ -1,5 +1,11 @@
 # Historique
 
+## Correctif local en validation — priorité des nouveaux esclaves
+
+- La valeur par défaut s'applique lors de l'arrivée d'un nouvel esclave lorsque le changement de faction réinitialise son travail, y compris après emprisonnement.
+- Les affectations des esclaves déjà présents ne sont pas modifiées ; le choix natif des tâches et les interdictions du statut sont conservés.
+- Aucun changement de version ou de tag, aucun envoi Workshop pour ce candidat local.
+
 ## Correctif local validé — priorité des colons de départ
 
 - Le réglage de priorité par défaut s'applique aussi aux affectations que RimWorld redistribue juste avant la génération de la carte ; il n'est plus remplacé par 3 lors du lancement d'une nouvelle partie.

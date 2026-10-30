@@ -17,6 +17,26 @@ internal static class StartingPawnPriorityScope
     [System.ThreadStatic] internal static List<Pawn>? Pawns;
 }
 
+internal static class SlaveEnrollmentPriorityScope
+{
+    [System.ThreadStatic] internal static Pawn? Pawn;
+}
+
+[HarmonyPatch(typeof(Pawn_GuestTracker), nameof(Pawn_GuestTracker.SetGuestStatus))]
+internal static class SlaveEnrollmentPrioritiesPatch
+{
+    private static void Prefix(Pawn ___pawn, Faction newHost, GuestStatus guestStatus, out Pawn? __state)
+    {
+        __state = SlaveEnrollmentPriorityScope.Pawn;
+        // Only the transition that makes vanilla reset work via SetFaction.
+        // Nested SetGuestStatus(null) during SetFaction keeps this outer scope.
+        if (guestStatus == GuestStatus.Slave && newHost?.IsPlayer == true && ___pawn.Faction != newHost)
+            SlaveEnrollmentPriorityScope.Pawn = ___pawn;
+    }
+
+    private static void Finalizer(Pawn? __state) => SlaveEnrollmentPriorityScope.Pawn = __state;
+}
+
 [HarmonyPatch(typeof(GameInitData), nameof(GameInitData.PrepForMapGen))]
 internal static class StartingPawnPrioritiesPatch
 {

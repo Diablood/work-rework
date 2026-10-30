@@ -21,7 +21,7 @@ try {
     }
     $flags = [System.Reflection.BindingFlags]'Public,NonPublic,Instance,Static,DeclaredOnly'
     $patchTypes = @($mod.GetTypes() | Where-Object { $_.GetCustomAttributesData().AttributeType.FullName -contains 'HarmonyLib.HarmonyPatch' })
-    if ($patchTypes.Count -ne 25) { throw "Expected 25 patch classes, found $($patchTypes.Count)." }
+    if ($patchTypes.Count -ne 26) { throw "Expected 26 patch classes, found $($patchTypes.Count)." }
     foreach ($patchType in $patchTypes) {
         $patchAttribute = $patchType.GetCustomAttributesData() | Where-Object { $_.AttributeType.FullName -eq 'HarmonyLib.HarmonyPatch' }
         $targetTypeName = $patchAttribute.ConstructorArguments[0].Value.FullName

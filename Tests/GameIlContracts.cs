@@ -36,7 +36,13 @@ internal static class GameIlContracts
         }
         if (assignments != 3 || disabled != 1)
             throw new Exception($"Starting-pawn assignment contract changed: {assignments} assignments, {disabled} resets.");
-        Console.WriteLine("Game IL contracts: three range boundaries, two scanner field reads and starting-pawn reset/three default assignments verified without loading game code.");
+        var guestStatus = Read("RimWorld", "Pawn_GuestTracker", "SetGuestStatus");
+        var factionChange = Read("Verse", "Pawn", "SetFaction");
+        int Calls(List<(OpCode Op, int Operand)> body, string name) => body.Count(instruction =>
+            (instruction.Op == OpCodes.Call || instruction.Op == OpCodes.Callvirt) && MethodName(instruction.Operand) == name);
+        if (Calls(guestStatus, "SetFaction") != 2 || Calls(factionChange, "EnableAndInitialize") != 1 || Calls(factionChange, "SetGuestStatus") != 1)
+            throw new Exception("Slave enrollment/faction work-reset or nested guest-status contract changed.");
+        Console.WriteLine("Game IL contracts: three range boundaries, two scanner field reads, starting-pawn assignments and slave/faction work reset verified without loading game code.");
 
         void CheckConstants(string ns, string type, string method, int expected)
         {

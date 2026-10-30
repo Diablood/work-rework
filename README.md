@@ -46,6 +46,8 @@ Changing the maximum requires **Apply priority settings**. A lower maximum reduc
 
 The default priority starts at 3 and is used for the tasks the game activates for starting colonists when preparing a new map, and on other new pawns' first work initialization. It does not activate every work category or change an already-initialized pawn in an existing save, including an existing world pawn being recruited. Reactivating a task keeps its existing cycling/checkbox behavior.
 
+An incoming pawn joining as a slave also receives this default when the faction change resets their work settings. Existing slaves keep their assignments; slavery restrictions still disable forbidden work.
+
 Adding the mod to an existing save and saving/reloading settings were user-tested. Removal and downgrades have not been validated. The initial test scope is adult human colonists; other populations have not received dedicated validation.
 
 ## Development and publication
