@@ -1,5 +1,11 @@
 # Historique
 
+## Correctif local en validation — priorité au recrutement
+
+- La priorité par défaut est appliquée lors de la réinitialisation native du travail à l'entrée d'un pion humain dans la faction du joueur, notamment après recrutement d'un prisonnier.
+- Ce point commun remplace le correctif spécifique aux esclaves et conserve sa prise en charge. Aucun changement des affectations au chargement des colons ou esclaves déjà présents, ni des interdictions de travail.
+- Aucun changement de version ou de tag, aucun envoi Workshop pour ce candidat local.
+
 ## Correctif local validé — priorité des nouveaux esclaves
 
 - La valeur par défaut s'applique lors de l'arrivée d'un nouvel esclave lorsque le changement de faction réinitialise son travail, y compris après emprisonnement.

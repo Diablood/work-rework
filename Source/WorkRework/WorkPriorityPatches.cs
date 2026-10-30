@@ -42,7 +42,7 @@ internal static class PriorityRangePatch
         if (___pawn.RaceProps.Humanlike)
             priority = PriorityRules.InitialAssignment(priority, WorkReworkMod.MaximumPriority,
                 PawnWorkInitializationScope.NewPawn || StartingPawnPriorityScope.Pawns?.Contains(___pawn) == true ||
-                ReferenceEquals(SlaveEnrollmentPriorityScope.Pawn, ___pawn), WorkReworkMod.InitialPriority);
+                ReferenceEquals(PlayerFactionPriorityScope.Pawn, ___pawn), WorkReworkMod.InitialPriority);
     }
     private static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions) => PriorityTranspilers.ExtendRange(instructions, 1, configurable: false);
     private static void Postfix(Pawn ___pawn, WorkTypeDef w)

@@ -17,24 +17,24 @@ internal static class StartingPawnPriorityScope
     [System.ThreadStatic] internal static List<Pawn>? Pawns;
 }
 
-internal static class SlaveEnrollmentPriorityScope
+internal static class PlayerFactionPriorityScope
 {
     [System.ThreadStatic] internal static Pawn? Pawn;
 }
 
-[HarmonyPatch(typeof(Pawn_GuestTracker), nameof(Pawn_GuestTracker.SetGuestStatus))]
-internal static class SlaveEnrollmentPrioritiesPatch
+[HarmonyPatch(typeof(Pawn), nameof(Pawn.SetFaction))]
+internal static class PlayerFactionPrioritiesPatch
 {
-    private static void Prefix(Pawn ___pawn, Faction newHost, GuestStatus guestStatus, out Pawn? __state)
+    private static void Prefix(Pawn __instance, Faction newFaction, out Pawn? __state)
     {
-        __state = SlaveEnrollmentPriorityScope.Pawn;
-        // Only the transition that makes vanilla reset work via SetFaction.
-        // Nested SetGuestStatus(null) during SetFaction keeps this outer scope.
-        if (guestStatus == GuestStatus.Slave && newHost?.IsPlayer == true && ___pawn.Faction != newHost)
-            SlaveEnrollmentPriorityScope.Pawn = ___pawn;
+        __state = PlayerFactionPriorityScope.Pawn;
+        // RecruitUtility clears guest status before SetFaction, so capture the
+        // actual faction transition shared by recruitment and enslavement.
+        if (__instance.RaceProps.Humanlike && newFaction?.IsPlayer == true && __instance.Faction != newFaction)
+            PlayerFactionPriorityScope.Pawn = __instance;
     }
 
-    private static void Finalizer(Pawn? __state) => SlaveEnrollmentPriorityScope.Pawn = __state;
+    private static void Finalizer(Pawn? __state) => PlayerFactionPriorityScope.Pawn = __state;
 }
 
 [HarmonyPatch(typeof(GameInitData), nameof(GameInitData.PrepForMapGen))]

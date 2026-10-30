@@ -28,9 +28,9 @@ Le chiffre de priorité prime sur l'ordre visuel. L'ordre principal puis celui d
 
 Maximum réglable de 1 à 9, initialement 9. **Appliquer les réglages de priorité** confirme la saisie. Réduire le maximum ramène les chiffres supérieurs au nouveau plafond ; remonter ensuite ne restaure pas les anciens chiffres. Ce plafond global est aussi appliqué aux parties lors de leur chargement.
 
-La priorité par défaut, initialement 3, concerne les tâches activées pour les colons de départ lors de la préparation d'une nouvelle carte, puis la première initialisation du travail des autres nouveaux colons. Les tâches que le jeu laisse inactives restent à zéro. Les colons déjà initialisés d'une partie existante, y compris ceux déjà présents dans le monde avant recrutement, restent inchangés. La réactivation d'une tâche ne force pas ce défaut.
+La priorité par défaut, initialement 3, concerne les tâches activées pour les colons de départ lors de la préparation d'une nouvelle carte, puis la première initialisation du travail des autres nouveaux colons. Les tâches que le jeu laisse inactives restent à zéro. Charger une partie existante ne modifie pas les affectations des pions déjà présents dans la colonie. La réactivation d'une tâche ne force pas ce défaut.
 
-Un nouveau pion rejoignant la colonie comme esclave reçoit également ce défaut lorsque son changement de faction réinitialise son travail. Les esclaves déjà présents conservent leurs affectations et les tâches interdites par leur statut restent désactivées.
+Un pion humain rejoignant la faction du joueur reçoit également ce défaut lorsque son changement de faction réinitialise son travail, notamment lors d'un recrutement de prisonnier ou d'un asservissement. Les colons et esclaves déjà présents conservent leurs affectations et les tâches interdites restent désactivées.
 
 Libellés verticaux optionnels, alignés sur le bas. Un cadre vert identifie le travail en cours : enfant déplié, parent replié ou colonne autonome. Une activité sans fournisseur identifiable n'allume aucune colonne. Les barres n'apparaissent que si le contenu visible déborde.
 
