@@ -232,3 +232,7 @@ Le brouillon ne modifie pas la partie avant Appliquer. Les valeurs individuelles
 - Liste des tâches Complex Jobs : https://steamcommunity.com/workshop/filedetails/discussion/2069684319/4289187886487779709/.
 - Grouped Pawns Lists : https://steamcommunity.com/sharedfiles/filedetails/?id=2340773428 — regroupement des listes de colons ; dépendances annoncées Harmony et RWLayout ; sources https://gitlab.com/krypt_lynx/PawnTableGrouped/. Fonctionnement en 1.7 signalé par l'utilisateur, à tester avec notre mod en phase 2.
 - Copies locales installées : About.xml et LICENSE de Work Tab ; About.xml et dossier 1.7 de Complex Jobs.
+
+### Précision du 21 novembre 2026 — activation d'un enfant
+
+L'édition directe d'un enfant rattaché est autorisée même si le parent est désactivé. Lui donner une priorité positive réactive sa base parent et uniquement cet enfant ; tous ses frères encore rattachés restent à zéro. L'édition d'un parent continue d'appliquer sa valeur à tous ses enfants. L'héritage, une valeur zéro et les tâches autonomes n'activent pas implicitement le parent. Cette précision remplace l'interdiction antérieure d'éditer les enfants d'un parent à zéro, sans supprimer le blocage effectif tant qu'aucune activation n'est demandée.

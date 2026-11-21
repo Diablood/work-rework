@@ -9,7 +9,7 @@
   <WR_ExplicitPriority>Priorité propre à cette sous-tâche (bordure bleue)</WR_ExplicitPriority>
   <WR_InheritedPriority>Dernière valeur appliquée au groupe (héritée)</WR_InheritedPriority>
   <WR_ChildPriorityTip>{0}\nCatégorie : {1}\n{2} : {3}\n\nClic gauche/droit : modifier. Ctrl + clic droit : rétablir l'héritage. Clic milieu : choisir une valeur ou réinitialiser les enfants de cette catégorie pour ce colon.</WR_ChildPriorityTip>
-  <WR_ParentBlocksChildren>Catégorie désactivée : toutes ses sous-tâches sont bloquées. Réactiver la catégorie pour utiliser ou modifier ses sous-tâches.</WR_ParentBlocksChildren>
+  <WR_ParentBlocksChildren>Catégorie désactivée. Attribuer une priorité à une sous-tâche active uniquement celle-ci ; les autres restent désactivées.</WR_ParentBlocksChildren>
   <WR_ParentMixedTip>* : les enfants n'ont pas tous la même priorité. Le chiffre du parent est le plus petit chiffre non nul des enfants. Modifier le parent applique la nouvelle valeur à tous ses enfants et réinitialise leurs exceptions. Clic milieu : choisir directement une valeur.</WR_ParentMixedTip>
   <WR_UseParentPriority>Hériter de {0} : {1}</WR_UseParentPriority>
   <WR_PriorityValue>Priorité {0}</WR_PriorityValue>

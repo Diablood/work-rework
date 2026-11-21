@@ -285,7 +285,7 @@ internal static class GroupedPawnsCompatibility
     {
         if (pawn.Dead || !pawn.RaceProps.Humanlike || pawn.workSettings?.EverWork != true || pawn.WorkTypeIsDisabled(column.workType)) return false;
         if (column is not WorkGiverColumnDef leaf) return true;
-        if (!WorkCatalog.Standalone(leaf.Giver) && WorkPriorities.Parent(pawn, column.workType) == 0 || pawn.WorkTagIsDisabled(leaf.Giver.workTags)) return false;
+        if (pawn.WorkTagIsDisabled(leaf.Giver.workTags)) return false;
         return leaf.Giver.requiredCapacities.All(c => pawn.health.capacities.CapableOf(c));
     }
 
@@ -318,7 +318,7 @@ internal static class GroupedPawnsCompatibility
 
     private static void Set(Pawn pawn, PawnColumnDef column, int? value)
     {
-        if (column is WorkGiverColumnDef leaf) WorkPriorityComponent.Current?.SetOverride(pawn, leaf.Giver, value);
+        if (column is WorkGiverColumnDef leaf) WorkPriorityComponent.Current?.EditTaskPriority(pawn, leaf.Giver, value);
         else if (value.HasValue) WorkPriorities.SetParent(pawn, column.workType, PriorityRules.Limit(value.Value, WorkReworkMod.MaximumPriority));
         else WorkPriorityComponent.Current?.ResetCategory(pawn, column.workType);
     }

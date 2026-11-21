@@ -1,5 +1,14 @@
 # Historique
 
+## Correctif local en validation — activation directe d'une sous-tâche
+
+- Une sous-tâche peut être activée directement lorsque son parent est à zéro, par clic gauche/droit, menu au clic milieu ou commande de groupe Grouped Pawns Lists.
+- Le parent est réactivé à la valeur choisie et seuls les enfants rattachés à ce parent sont ajustés : la tâche choisie reçoit la priorité, les autres restent à zéro. Les tâches autonomes ne sont pas modifiées.
+- Les incapacités et capacités requises restent bloquantes. Désactiver un enfant ou rétablir son héritage ne réactive pas un parent à zéro. L'édition du parent conserve son rôle de commande sur tous ses enfants.
+- Chargement, copier-coller et migrations continuent d'utiliser le stockage sans activation implicite ; aucune nouvelle clé de sauvegarde. Mode oui/non et plafond configuré pris en charge.
+- Version et tag conservés pour ce candidat local ; aucun envoi Workshop.
+
+
 ## Correctif local validé — priorité au recrutement
 
 - La priorité par défaut est appliquée lors de la réinitialisation native du travail à l'entrée d'un pion humain dans la faction du joueur, notamment après recrutement d'un prisonnier.

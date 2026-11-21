@@ -55,6 +55,22 @@ public sealed partial class WorkPriorityComponent : GameComponent
         if (overrides.TryGetValue(pawn, out var changed)) changed.Summaries.Clear();
     }
 
+    // An explicit user edit may enable one child of a disabled category.
+    // Keep SetOverride side-effect free for loading, copying and migrations.
+    internal void EditTaskPriority(Pawn pawn, WorkGiverDef giver, int? value)
+    {
+        if (pawn.Dead || pawn.workSettings?.EverWork != true || pawn.WorkTypeIsDisabled(giver.workType) ||
+            pawn.WorkTagIsDisabled(giver.workTags) || giver.requiredCapacities.Any(c => !pawn.health.capacities.CapableOf(c)))
+            return;
+        EnsureStandalone(pawn);
+        var attached = WorkCatalog.Children(giver.workType).Select(child => child.defName).ToList();
+        ChildPriorityEdit edit = ChildPriorityEdit.Build(attached, giver.defName, WorkPriorities.Parent(pawn, giver.workType), value, WorkReworkMod.MaximumPriority);
+        if (edit.ParentPriority.HasValue)
+            pawn.workSettings.SetPriority(giver.workType, edit.ParentPriority.Value);
+        foreach (var change in edit.Overrides)
+            SetOverride(pawn, WorkCatalog.Giver(change.Key)!, change.Value);
+    }
+
     internal void ResetCategory(Pawn pawn, WorkTypeDef type)
     {
         foreach (WorkGiverDef giver in WorkCatalog.Children(type))

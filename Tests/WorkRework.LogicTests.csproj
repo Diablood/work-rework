@@ -9,6 +9,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="..\Source\WorkRework\PriorityRules.cs" Link="PriorityRules.cs" />
+    <Compile Include="..\Source\WorkRework\ChildPriorityEdit.cs" Link="ChildPriorityEdit.cs" />
     <Compile Include="..\Source\WorkRework\WorkLayout.cs" Link="WorkLayout.cs" />
     <Compile Include="..\Source\WorkRework\OrganizationPriorityMigration.cs" Link="OrganizationPriorityMigration.cs" />
     <Compile Include="..\Source\WorkRework\ScrollViewport.cs" Link="ScrollViewport.cs" />

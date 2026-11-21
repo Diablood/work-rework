@@ -24,7 +24,7 @@ Take control of the Work tab: expand vanilla categories, set individual subtask 
 
 **Left / right-click** cycles priorities. **Middle-click** opens a value menu. **Ctrl + right-click** on an attached child restores inheritance. **Organize work** opens the two-list editor from the Work tab or the mod settings.
 
-Editing a parent applies its value to all attached children and clears their overrides. Disabling the parent blocks those children. A standalone task stays independent of its original category.
+Editing a parent applies its value to all attached children and clears their overrides. Disabling the parent blocks those children. Assigning a positive priority directly to an attached child reactivates that child only; its attached siblings remain disabled. A standalone task stays independent of its original category.
 
 Numeric priority comes before layout order. For ordinary work selection, main order then child order break equal-priority ties; native emergency passes and forced orders retain their rules.
 

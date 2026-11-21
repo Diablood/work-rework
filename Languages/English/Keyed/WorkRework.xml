@@ -9,7 +9,7 @@
   <WR_ExplicitPriority>Individual task priority (blue outline)</WR_ExplicitPriority>
   <WR_InheritedPriority>Last group value (inherited)</WR_InheritedPriority>
   <WR_ChildPriorityTip>{0}\nCategory: {1}\n{2}: {3}\n\nLeft/right-click: change. Ctrl + right-click: inherit again. Middle-click: pick a value or reset this category's tasks for this pawn.</WR_ChildPriorityTip>
-  <WR_ParentBlocksChildren>Category disabled: all its tasks are blocked. Enable the category to use or edit its tasks.</WR_ParentBlocksChildren>
+  <WR_ParentBlocksChildren>Category disabled. Assign a priority to a subtask to enable only that task; the others stay disabled.</WR_ParentBlocksChildren>
   <WR_ParentMixedTip>*: tasks have different priorities. The parent shows their lowest non-zero priority. Editing the parent applies the new value to all its tasks and resets their exceptions. Middle-click to pick a value directly.</WR_ParentMixedTip>
   <WR_UseParentPriority>Inherit from {0}: {1}</WR_UseParentPriority>
   <WR_PriorityValue>Priority {0}</WR_PriorityValue>

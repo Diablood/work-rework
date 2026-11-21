@@ -140,18 +140,19 @@ public sealed class PawnColumnWorker_WorkGiverPreview : PawnColumnWorker
             else if (lacksCapacity)
                 tip += "\n\n" + "IncapableOfWorkTypeBecauseOfCapacities".Translate();
             TooltipHandler.TipRegion(rect, tip);
-            if (!disabled && !lacksCapacity && !parentDisabled && Event.current.type == EventType.mouseDown && Mouse.IsOver(box))
+            if (!disabled && !lacksCapacity && Event.current.type == EventType.mouseDown && Mouse.IsOver(box))
             {
                 Event current = Event.current;
+                int editValue = parentDisabled ? 0 : raw;
                 if (current.button == 1 && current.control)
                 {
-                    if (!standalone) WorkPriorityComponent.Current?.SetOverride(pawn, Giver, null);
+                    if (!standalone) WorkPriorityComponent.Current?.EditTaskPriority(pawn, Giver, null);
                 }
                 else if (current.button == 2)
                     WorkPriorityMenus.Child(pawn, Giver);
                 else if (current.button == 0 || current.button == 1)
-                    WorkPriorityComponent.Current?.SetOverride(pawn, Giver, manualPriorities
-                        ? PriorityRules.Cycle(raw, current.button == 0, WorkReworkMod.MaximumPriority) : raw > 0 ? 0 : 3);
+                    WorkPriorityComponent.Current?.EditTaskPriority(pawn, Giver, manualPriorities
+                        ? PriorityRules.Cycle(editValue, current.button == 0, WorkReworkMod.MaximumPriority) : editValue > 0 ? 0 : 3);
                 else return;
                 current.Use();
             }

@@ -35,20 +35,20 @@ internal static class WorkPriorityMenus
     {
         var options = new List<FloatMenuOption>();
         if (!WorkCatalog.Standalone(giver))
-            options.Add(new FloatMenuOption("WR_UseParentPriority".Translate(giver.workType.LabelCap, GroupDefault(pawn, giver.workType)), () => WorkPriorityComponent.Current?.SetOverride(pawn, giver, null)));
+            options.Add(new FloatMenuOption("WR_UseParentPriority".Translate(giver.workType.LabelCap, GroupDefault(pawn, giver.workType)), () => WorkPriorityComponent.Current?.EditTaskPriority(pawn, giver, null)));
         if (Find.PlaySettings.useWorkPriorities)
         {
             for (int i = 0; i <= WorkReworkMod.MaximumPriority; i++)
             {
                 int value = i;
                 string label = value == 0 ? "WR_Disabled".Translate().ToString() : "WR_PriorityValue".Translate(value).ToString();
-                options.Add(new FloatMenuOption(label, () => WorkPriorityComponent.Current?.SetOverride(pawn, giver, value)));
+                options.Add(new FloatMenuOption(label, () => WorkPriorityComponent.Current?.EditTaskPriority(pawn, giver, value)));
             }
         }
         else
         {
-            options.Add(new FloatMenuOption("WR_Enabled".Translate(), () => WorkPriorityComponent.Current?.SetOverride(pawn, giver, 3)));
-            options.Add(new FloatMenuOption("WR_Disabled".Translate(), () => WorkPriorityComponent.Current?.SetOverride(pawn, giver, 0)));
+            options.Add(new FloatMenuOption("WR_Enabled".Translate(), () => WorkPriorityComponent.Current?.EditTaskPriority(pawn, giver, 3)));
+            options.Add(new FloatMenuOption("WR_Disabled".Translate(), () => WorkPriorityComponent.Current?.EditTaskPriority(pawn, giver, 0)));
         }
         if (!WorkCatalog.Standalone(giver))
             options.Add(new FloatMenuOption("WR_ResetCategoryChildren".Translate(giver.workType.LabelCap, GroupDefault(pawn, giver.workType)),

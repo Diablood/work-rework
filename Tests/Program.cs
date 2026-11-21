@@ -12,6 +12,38 @@ void True(string scenario, bool actual)
     passed++;
 }
 
+// Exercise the same edit plan applied by individual and grouped UI commands.
+var attachedTasks = new[] { "Build", "Repair", "Deconstruct" };
+var dormant = new Dictionary<string, int?> { ["Build"] = 8, ["Repair"] = null, ["Deconstruct"] = 4, ["Standalone"] = 7 };
+ChildPriorityEdit activateRepair = ChildPriorityEdit.Build(attachedTasks, "Repair", 0, 1, 9);
+Equal("Direct child activation raises its disabled parent", 1, activateRepair.ParentPriority!.Value);
+foreach (var change in activateRepair.Overrides) dormant[change.Key] = change.Value;
+Equal("Chosen child becomes effective immediately", 1, PriorityRules.Effective(activateRepair.ParentPriority.Value, dormant["Repair"], true));
+Equal("Dormant positive sibling stays disabled", 0, PriorityRules.Effective(activateRepair.ParentPriority.Value, dormant["Build"], true));
+Equal("Other dormant sibling stays disabled", 0, PriorityRules.Effective(activateRepair.ParentPriority.Value, dormant["Deconstruct"], true));
+Equal("Independent task is untouched by parent activation", 7, dormant["Standalone"]!.Value);
+PrioritySummary activatedSummary = PriorityRules.Summarize(attachedTasks.Select(id => PriorityRules.Effective(activateRepair.ParentPriority.Value, dormant[id], true)), 0);
+Equal("Parent summarizes selected child priority", 1, activatedSummary.Priority);
+True("Parent marks selected-only child activation as mixed", activatedSummary.Mixed);
+ChildPriorityEdit activeEdit = ChildPriorityEdit.Build(attachedTasks, "Repair", 4, 2, 9);
+True("Editing an active category does not change its base", !activeEdit.ParentPriority.HasValue);
+True("Editing active category changes only the selected task", activeEdit.Overrides.Count == 1 && activeEdit.Overrides["Repair"] == 2);
+ChildPriorityEdit offEdit = ChildPriorityEdit.Build(attachedTasks, "Repair", 0, 0, 9);
+True("Explicit zero does not enable a disabled category", !offEdit.ParentPriority.HasValue && offEdit.Overrides.Count == 1 && offEdit.Overrides["Repair"] == 0);
+ChildPriorityEdit inheritEdit = ChildPriorityEdit.Build(attachedTasks, "Repair", 0, null, 9);
+True("Restoring inheritance does not enable a disabled category", !inheritEdit.ParentPriority.HasValue && inheritEdit.Overrides.Count == 1 && inheritEdit.Overrides["Repair"] == null);
+ChildPriorityEdit standaloneEdit = ChildPriorityEdit.Build(attachedTasks, "Standalone", 0, 6, 9);
+True("Standalone edit never enables its origin", !standaloneEdit.ParentPriority.HasValue && standaloneEdit.Overrides.Count == 1 && standaloneEdit.Overrides["Standalone"] == 6);
+ChildPriorityEdit cappedEdit = ChildPriorityEdit.Build(attachedTasks, "Repair", 0, 9, 4);
+True("Child activation respects configured maximum for parent and child", cappedEdit.ParentPriority == 4 && cappedEdit.Overrides["Repair"] == 4);
+ChildPriorityEdit singleEdit = ChildPriorityEdit.Build(new[] { "Repair" }, "Repair", 0, 3, 9);
+True("Only remaining attached child can activate its category", singleEdit.ParentPriority == 3 && singleEdit.Overrides.Count == 1);
+ChildPriorityEdit simpleEdit = ChildPriorityEdit.Build(attachedTasks, "Repair", 0, 3, 1);
+Equal("Simple mode activation respects maximum one", 1, simpleEdit.ParentPriority!.Value);
+Equal("Simple mode activates selected child", 3, PriorityRules.Effective(simpleEdit.ParentPriority.Value, simpleEdit.Overrides["Repair"], false));
+Equal("Simple mode keeps other children off", 0, PriorityRules.Effective(simpleEdit.ParentPriority.Value, simpleEdit.Overrides["Build"], false));
+True("Grouped mixed parent states use independent per-pawn edit plans", activateRepair.ParentPriority == 1 && !activeEdit.ParentPriority.HasValue);
+
 Equal("New children inherit unchanged native priority", 4, PriorityRules.Effective(4, null, true));
 Equal("Child priority 1 overrides parent 4", 1, PriorityRules.Effective(4, 1, true));
 Equal("Child priority 9 remains available", 9, PriorityRules.Effective(2, 9, true));

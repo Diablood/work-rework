@@ -12,7 +12,7 @@ Work Rework reprend les catégories vanilla dans un onglet Travail plus précis 
 - **Ctrl + clic droit sur un enfant rattaché** : rétablir l'héritage.
 - **Organiser les tâches** : ouvrir l'éditeur depuis Travail ou les paramètres du mod.
 
-Le parent résume ses enfants par le plus petit chiffre non nul ; * indique des différences. Modifier le parent applique la valeur à tous ses enfants rattachés et efface leurs exceptions. Un parent désactivé bloque ces enfants ; une tâche autonome reste indépendante.
+Le parent résume ses enfants par le plus petit chiffre non nul ; * indique des différences. Modifier le parent applique la valeur à tous ses enfants rattachés et efface leurs exceptions. Un parent désactivé bloque ces enfants. Attribuer directement une priorité positive à un enfant réactive uniquement cette sous-tâche ; les autres enfants rattachés restent désactivés. Une tâche autonome reste indépendante.
 
 ## Organisation
 
