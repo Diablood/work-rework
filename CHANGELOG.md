@@ -1,6 +1,6 @@
 # Historique
 
-## Correctif local en validation — activation directe d'une sous-tâche
+## Correctif local validé — activation directe d'une sous-tâche
 
 - Une sous-tâche peut être activée directement lorsque son parent est à zéro, par clic gauche/droit, menu au clic milieu ou commande de groupe Grouped Pawns Lists.
 - Le parent est réactivé à la valeur choisie et seuls les enfants rattachés à ce parent sont ajustés : la tâche choisie reçoit la priorité, les autres restent à zéro. Les tâches autonomes ne sont pas modifiées.
