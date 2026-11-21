@@ -1,0 +1,8 @@
+Work Rework 1.0.1 — missing label fixes.
+
+- Fixed missing names in Organize work for some mod and DLC categories: the editor now uses the same category label as the Work tab.
+- Fixed subtask, standalone task and original category names. When a definition has no label, its verb, gerund or internal identifier is used as a fallback.
+- Fixed missing subtask names in category header tooltips, including Stabilizing under Doctor. Emergency markers and task order are preserved.
+- In developer mode, organization editor tooltips show task identifiers to help diagnose remaining issues.
+
+Display fixes only: priorities, saved organization and work selection are unchanged. English and French. RimWorld 1.7; Harmony required.

@@ -554,3 +554,11 @@ Validation en jeu attendue avec la copie locale : partir d'une catégorie à zé
 ### Validation utilisateur — activation directe d'une sous-tâche (21 novembre 2026)
 
 Retour global utilisateur après installation du correctif et envoi du formulaire : « Tests OK ». Correctif d'activation directe d'un enfant sous un parent à zéro accepté. Ce retour est une validation globale ; les sous-tests individuels du formulaire (sauvegarde/rechargement et commandes Grouped Pawns Lists) n'ont pas reçu de réponses séparées et ne sont pas présentés comme des observations détaillées. Aucun test en jeu exécuté par l'agent. Aucun nouveau code, build ou déploiement nécessaire pour consigner ce retour. Candidat local toujours numéroté 1.0.1, tag et Workshop inchangés ; les correctifs locaux restent à intégrer à une prochaine livraison sur demande.
+
+### Livraison préparée 1.0.2 — 21 novembre 2026
+
+Version demandée par l'utilisateur et notes Workshop FR/EN préparées. Dernière logique identique aux correctifs acceptés en jeu ; seul le numéro et les documents de livraison changent. Notes initiales 1.0.1 archivées ; historique regroupé sous 1.0.2. Version/DLL/About/listing 1.0.2 cohérents et PublishedFileId 3826051737 conservé. Aucun lien GitHub dans les notes publiques.
+
+Exécuté : prepare-workshop.ps1 avec rebuild forcé, zéro avertissement/erreur, 339 assertions, 26 signatures Harmony, contrats IL natifs et 43 membres/deux sites IL optionnels réussis sur RimWorld 1.7.5014 rev1195 / SDK 10.0.404. Paquet artifacts/packages/WorkRework-1.0.2.zip et staging artifacts/workshop/WorkRework-1.0.2-20261121-222114-3180266/WorkRework : onze fichiers et empreintes conformes.
+
+Installation 1.0.2 par deploy.ps1 jeu fermé : onze SHA256 conformes, About 1.0.2 et PublishedFileId relus. Sauvegarde de la copie locale précédente : artifacts/backups/WorkRework-20261121-222130-7987795.zip. Aucune modification de profil de mods, de préférence ou de partie. Aucun nouveau test en jeu après changement de numéro ; validations utilisateur précédentes consignées plus haut. Le créateur effectuera l'envoi sur le Workshop ; aucun transfert ni changement de visibilité par l'agent. Dernière version distante connue 1.0.1.

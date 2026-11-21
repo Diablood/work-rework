@@ -1,31 +1,14 @@
 # Historique
 
-## Correctif local validé — activation directe d'une sous-tâche
+## 1.0.2 — priorités initiales et activation des sous-tâches
 
-- Une sous-tâche peut être activée directement lorsque son parent est à zéro, par clic gauche/droit, menu au clic milieu ou commande de groupe Grouped Pawns Lists.
-- Le parent est réactivé à la valeur choisie et seuls les enfants rattachés à ce parent sont ajustés : la tâche choisie reçoit la priorité, les autres restent à zéro. Les tâches autonomes ne sont pas modifiées.
-- Les incapacités et capacités requises restent bloquantes. Désactiver un enfant ou rétablir son héritage ne réactive pas un parent à zéro. L'édition du parent conserve son rôle de commande sur tous ses enfants.
-- Chargement, copier-coller et migrations continuent d'utiliser le stockage sans activation implicite ; aucune nouvelle clé de sauvegarde. Mode oui/non et plafond configuré pris en charge.
-- Version et tag conservés pour ce candidat local ; aucun envoi Workshop.
-
-
-## Correctif local validé — priorité au recrutement
-
-- La priorité par défaut est appliquée lors de la réinitialisation native du travail à l'entrée d'un pion humain dans la faction du joueur, notamment après recrutement d'un prisonnier.
-- Ce point commun remplace le correctif spécifique aux esclaves et conserve sa prise en charge. Aucun changement des affectations au chargement des colons ou esclaves déjà présents, ni des interdictions de travail.
-- Aucun changement de version ou de tag, aucun envoi Workshop pour ce candidat local.
-
-## Correctif local validé — priorité des nouveaux esclaves
-
-- La valeur par défaut s'applique lors de l'arrivée d'un nouvel esclave lorsque le changement de faction réinitialise son travail, y compris après emprisonnement.
-- Les affectations des esclaves déjà présents ne sont pas modifiées ; le choix natif des tâches et les interdictions du statut sont conservés.
-- Aucun changement de version ou de tag, aucun envoi Workshop pour ce candidat local.
-
-## Correctif local validé — priorité des colons de départ
-
-- Le réglage de priorité par défaut s'applique aussi aux affectations que RimWorld redistribue juste avant la génération de la carte ; il n'est plus remplacé par 3 lors du lancement d'une nouvelle partie.
-- Correction limitée aux colons sélectionnés pour le départ pendant cette préparation. Le choix des tâches actives reste natif ; tâches inactives, parties existantes et réactivation conservées.
-- Aide FR/EN précisée. Aucun changement de version ou de tag, aucun envoi Workshop pour ce candidat local.
+- La priorité par défaut configurée est conservée lors du lancement d'une nouvelle partie, y compris après la redistribution native des tâches avant génération de la carte.
+- Le défaut configuré est appliqué aux tâches activées quand un pion humain rejoint la faction du joueur et que le jeu réinitialise son travail : recrutement de prisonnier, asservissement et même point d'entrée natif.
+- Les affectations des colons et esclaves déjà présents sont conservées au rechargement ; les tâches inactives et les interdictions de travail restent respectées. Les priorités des pions déjà arrivés à 3 ne sont pas converties rétroactivement.
+- Une sous-tâche peut être activée directement lorsque son parent est à zéro, par clic gauche/droit, menu au clic milieu ou commande de groupe Grouped Pawns Lists. Elle seule devient active ; ses autres frères rattachés restent à zéro, et les tâches autonomes restent indépendantes.
+- Le parent reprend son résumé habituel (minimum non nul, avec * si les enfants diffèrent). Modifier le parent reste une commande pour tous ses enfants ; les incapacités restent applicables.
+- Aide et documentation FR/EN précisées. Correctifs validés en jeu par l'utilisateur ; 339 assertions et contrôles des contrats natifs/optionnels au build. Aucune nouvelle clé de sauvegarde.
+- Version et tag 1.0.2 ; mise à jour de l'article Workshop existant à effectuer par le créateur.
 
 ## 1.0.1 — libellés de l'organisation et infobulles
 

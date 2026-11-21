@@ -1,6 +1,6 @@
-# Préparation Workshop — Work Rework 1.0.1
+# Préparation Workshop — Work Rework 1.0.2
 
-Le correctif **1.0.1**, validé localement par l'utilisateur, répare les noms de catégories et sous-tâches dans l'éditeur et les infobulles. Sa version et son tag sont **1.0.1**. Le créateur a mis à jour l'article existant ; téléchargement 1.0.1 vérifié : version, identifiant et onze fichiers SHA256 identiques à la livraison. Visibilité privée toujours demandée ; aucun réglage Steam modifié par l'agent.
+La version **1.0.2** regroupe les correctifs validés de priorité initiale (départ, recrutement et asservissement) et d'activation directe d'un enfant sous un parent à zéro. L'article existant est encore suivi comme publié en 1.0.1 ; le créateur effectuera sa mise à jour. Les notes FR/EN sont prêtes ci-dessous. Visibilité privée toujours demandée ; aucun envoi ou réglage Steam effectué par l'agent.
 
 ## État de la page
 
@@ -14,7 +14,7 @@ Premier envoi effectué manuellement par le créateur : [Work Rework](https://st
 - Titre, résumés, dépendances et identifiants : `listing.json`.
 - Texte anglais prêt à copier : `description.en.bbcode.txt`.
 - Texte français prêt à copier : `description.fr.bbcode.txt`.
-- Notes de mise à jour 1.0.1 : `changenote.en.txt` et `changenote.fr.txt`. Notes initiales archivées sous `changenotes/1.0.0.en.txt` et `changenotes/1.0.0.fr.txt`.
+- Notes de mise à jour 1.0.2 : `changenote.en.txt` et `changenote.fr.txt`. Anciennes notes 1.0.0 et 1.0.1 archivées sous `changenotes/`.
 - Code sous la licence MIT déjà présente dans le dépôt ; visuels séparés dans `../LICENSING.md`.
 
 Le visuel est une illustration promotionnelle, pas une capture réelle. Pour une galerie supplémentaire, prendre des captures de la version finale : onglet avec parent déplié et tâche autonome, éditeur d'organisation, paramètres maximum/défaut, puis cellules de groupe de Grouped Pawns Lists. L'ancienne capture avec diagnostic technique ne représente pas le rendu final et n'est pas incluse.
@@ -27,7 +27,7 @@ Depuis la racine du projet :
 ./prepare-workshop.ps1
 ```
 
-Le script crée `artifacts/workshop/WorkRework-1.0.1-<horodatage UTC>/WorkRework` et un `manifest.json` adjacent. Le sous-dossier **WorkRework** est le contenu destiné au jeu ; le manifeste reste à côté. Il contient les onze fichiers autorisés : métadonnées, PublishedFileId, icône, aperçu, LoadFolders, DLL propre, README, deux documents de licence et traductions FR/EN.
+Le script crée `artifacts/workshop/WorkRework-1.0.2-<horodatage UTC>/WorkRework` et un `manifest.json` adjacent. Le sous-dossier **WorkRework** est le contenu destiné au jeu ; le manifeste reste à côté. Il contient les onze fichiers autorisés : métadonnées, PublishedFileId, icône, aperçu, LoadFolders, DLL propre, README, deux documents de licence et traductions FR/EN.
 
 Ne pas sélectionner le checkout de développement comme dossier d'envoi. Le code local du jeu 1.7 confirme que l'uploader prend le dossier racine du mod : il faut utiliser le contenu propre, pas les sources, `.git`, outils ou décompilations.
 
@@ -59,11 +59,11 @@ Dans le code local inspecté, l'uploader ne remplace la description que lors de 
 - [Steamworks — processus d'envoi d'un item](https://partner.steamgames.com/doc/features/workshop/implementation#UploadingAWorkshopItem).
 - Licence existante conservée dans `../LICENSE`.
 
-## Mise à jour 1.0.1 à envoyer par le créateur
+## Mise à jour 1.0.2 à envoyer par le créateur
 
-1. Utiliser la copie locale 1.0.1 dans Mods/WorkRework et l'action de mise à jour de l'article existant 3826051737. Ne pas créer de nouvel article.
+1. Utiliser la copie locale 1.0.2 dans Mods/WorkRework et l'action de mise à jour de l'article existant 3826051737. Ne pas créer de nouvel article.
 2. Conserver la visibilité Masquée (privée).
-3. Appliquer la note de version 1.0.1 de changenote.en.txt / changenote.fr.txt dans les langues respectives. Les premières notes 1.0.0 sont archivées sous changenotes/.
+3. Appliquer la note de version 1.0.2 de changenote.en.txt / changenote.fr.txt dans les langues respectives. Les anciennes notes 1.0.0 et 1.0.1 sont archivées sous changenotes/.
 4. Vérifier après envoi la version téléchargée, les éléments requis (Harmony seul) et la visibilité privée. Signaler la fin de l'envoi pour mettre à jour le suivi local.
 
 La préparation, le tag Git et le déploiement local n'envoient aucune mise à jour Workshop.

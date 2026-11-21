@@ -1,8 +1,12 @@
-Work Rework 1.0.1 — correction des libellés manquants.
+Work Rework 1.0.2 — priorités initiales et activation des sous-tâches.
 
-- Correction des noms absents dans « Organiser les tâches » pour certaines catégories de mods ou DLC : l'éditeur utilise le même libellé que l'onglet Travail.
-- Correction des noms des sous-tâches, des tâches autonomes et de leur groupe d'origine. Si une définition n'a pas de libellé, un texte de secours utilise son verbe, son gérondif, puis son identifiant en dernier recours.
-- Correction de la liste des sous-tâches au survol d'une catégorie, notamment la ligne Stabilizing sous Médecin. Les marqueurs d'urgence et l'ordre sont conservés.
-- En mode développeur, l'infobulle de l'éditeur indique l'identifiant de la tâche pour faciliter le diagnostic.
+- La priorité par défaut configurée est désormais correctement appliquée aux colons de départ lors de la création d'une nouvelle partie, au lieu d'être remplacée par 3.
+- Ce réglage s'applique aussi lors du recrutement d'un prisonnier comme colon ou de son asservissement, quand le jeu initialise ses nouvelles affectations.
+- Il est maintenant possible d'activer directement une sous-tâche lorsque son métier parent est désactivé, sans devoir d'abord activer toute la catégorie. Seule la sous-tâche choisie devient active ; les autres restent désactivées.
+- Ce comportement fonctionne avec les clics, le menu de priorité et les commandes de groupe de Grouped Pawns Lists.
+- Le résumé du parent, les tâches autonomes, les incapacités et les interdictions de travail restent respectés.
+- Aide française et anglaise précisée.
 
-Correctifs d'affichage uniquement : priorités, organisation sauvegardée et sélection du travail inchangées. Français et anglais. RimWorld 1.7 ; Harmony requis.
+Les priorités déjà définies dans vos parties sont conservées. Le défaut configuré s'applique aux nouvelles initialisations ; il ne remplace pas rétroactivement les valeurs des pions déjà présents.
+
+RimWorld 1.7. Harmony requis. Grouped Pawns Lists reste optionnel.
