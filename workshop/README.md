@@ -1,6 +1,6 @@
 # Préparation Workshop — Work Rework 1.0.2
 
-La version **1.0.2** regroupe les correctifs validés de priorité initiale (départ, recrutement et asservissement) et d'activation directe d'un enfant sous un parent à zéro. L'article existant est encore suivi comme publié en 1.0.1 ; le créateur effectuera sa mise à jour. Les notes FR/EN sont prêtes ci-dessous. Visibilité privée toujours demandée ; aucun envoi ou réglage Steam effectué par l'agent.
+La version **1.0.2** regroupe les correctifs validés de priorité initiale (départ, recrutement et asservissement) et d'activation directe d'un enfant sous un parent à zéro. Le créateur confirme l'envoi de la mise à jour 1.0.2 sur l'article existant. Au contrôle immédiat, la copie téléchargée par Steam est encore en 1.0.1 ; la vérification du téléchargement 1.0.2 reste à faire. Les notes FR/EN sont prêtes ci-dessous. Visibilité privée toujours demandée ; aucun envoi ou réglage Steam effectué par l'agent.
 
 ## État de la page
 
