@@ -1,6 +1,6 @@
 # Préparation Workshop — Work Rework 1.0.3
 
-La version **1.0.3** utilise le défaut configuré pour uniformiser les priorités différentes d'un groupe Grouped Pawns Lists et pour son activation en mode oui/non. Correctif accepté par le retour global Tests OK. Dernier envoi Workshop signalé : 1.0.2 ; la mise à jour 1.0.3 sera effectuée par le créateur, en conservant la visibilité privée demandée.
+La version **1.0.3** utilise le défaut configuré pour uniformiser les priorités différentes d'un groupe Grouped Pawns Lists et pour son activation en mode oui/non. Correctif accepté par le retour global Tests OK. Mise à jour Workshop 1.0.3 effectuée par le créateur ; téléchargement vérifié : version, identifiant et onze fichiers SHA256 identiques à la livraison. Visibilité privée toujours demandée ; aucun réglage Steam modifié par l'agent.
 
 ## État de la page
 
