@@ -566,3 +566,15 @@ Installation 1.0.2 par deploy.ps1 jeu fermé : onze SHA256 conformes, About 1.0.
 ### Mise à jour Workshop 1.0.2 signalée — 21 novembre 2026
 
 L'utilisateur confirme « workshop à jour » après préparation et installation de la 1.0.2. Envoi de la 1.0.2 consigné sur l'article existant 3826051737. Contrôle local immédiat : copie téléchargée encore en 1.0.1, inventaire exact des onze fichiers, identifiant correct et six empreintes sur onze identiques à la livraison 1.0.2. Le téléchargement du correctif n'est donc pas encore vérifié ; ce constat ne démontre pas un échec de l'envoi. L'utilisateur connaît déjà le délai Steam et la possibilité de relancer son abonnement. Aucun nouveau transfert, changement de visibilité ou test en jeu par l'agent. Le tag 1.0.2 reste sur le commit de livraison ; seul le suivi évolue.
+
+## Correctif local — défaut des commandes GPL (22 novembre 2026)
+
+Signalement utilisateur : défaut configuré 5, première commande collective Grouped Pawns Lists uniformisant une colonne à 3. Cause vérifiée dans CellPrefix : les valeurs mixtes et les activations oui/non utilisaient PriorityRules.Limit(3, maximum) ; même constante dans le menu collectif Activer. Correction : GroupClick pur utilise InitialPriority borné pour les valeurs mixtes, les activations oui/non et le menu correspondant. Les valeurs numériques uniformes gardent Cycle, y compris zéro -> 9/1, et les cases uniformément actives en oui/non se désactivent toujours. Pas de changement de réactivation individuelle ni d'initialisation des pions.
+
+Commandes communes aux parents, enfants et autonomes du pont existant ; filtrage CanEdit et activation directe des enfants conservés. Aide FR/EN et guides précisés. Douze cas de régression ajoutés : défaut 5 dans les deux sens sur mélange, clics suivants 4/6, cycles uniformes zéro/maximum, plafond, mode oui/non et défaut historique 3. Version du candidat 1.0.2 conservée, tag/Workshop inchangés. Vérification en jeu à effectuer avec un groupe de valeurs mixtes puis une seconde commande sur la valeur uniforme.
+
+### Contrôles et installation locale — défaut des commandes GPL (22 novembre 2026)
+
+Build final sans avertissement/erreur : 351 assertions (12 nouvelles), 26 signatures Harmony, contrats IL natifs et 43 membres/deux sites IL optionnels réussis sur RimWorld 1.7.5014 rev1195. Paquet et staging onze fichiers SHA256 conformes. deploy.ps1 exécuté jeu fermé : correctif installé dans Mods/WorkRework, onze empreintes conformes. Aucun dossier local précédent présent au déploiement, donc pas de nouvelle sauvegarde créée. Version du candidat 1.0.2, identifiant 3826051737 et copie Workshop conservés ; aucun transfert Steam ni modification de préférences ou de parties par l'agent.
+
+Validation utilisateur attendue avec la copie locale : défaut 5, groupe de colons aux valeurs différentes, premier clic collectif à 5 pour les colons modifiables ; clics suivants sur valeur uniforme à 4/6 selon le sens. Si mode oui/non utilisé, activation collective puis retour au mode numérique pour confirmer la valeur stockée à 5. Aucun test en jeu du correctif par l'agent.

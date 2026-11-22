@@ -377,8 +377,8 @@ internal static class GroupedPawnsCompatibility
                     if (!WorkCatalog.Standalone(leaf.Giver)) apply(null);
                 }
                 else if (current.button == 0 || current.button == 1)
-                    apply(Find.PlaySettings.useWorkPriorities ? uniform ? PriorityRules.Cycle(first, current.button == 0, WorkReworkMod.MaximumPriority) : PriorityRules.Limit(3, WorkReworkMod.MaximumPriority)
-                        : uniform && first > 0 ? 0 : PriorityRules.Limit(3, WorkReworkMod.MaximumPriority));
+                    apply(PriorityRules.GroupClick(first, uniform, current.button == 0, Find.PlaySettings.useWorkPriorities,
+                        WorkReworkMod.MaximumPriority, WorkReworkMod.InitialPriority));
                 else return false;
                 current.Use();
             }
@@ -398,7 +398,7 @@ internal static class GroupedPawnsCompatibility
             }
         else
         {
-            options.Add(new FloatMenuOption("WR_Enabled".Translate(), () => apply(PriorityRules.Limit(3, WorkReworkMod.MaximumPriority))));
+            options.Add(new FloatMenuOption("WR_Enabled".Translate(), () => apply(PriorityRules.Limit(WorkReworkMod.InitialPriority, WorkReworkMod.MaximumPriority))));
             options.Add(new FloatMenuOption("WR_Disabled".Translate(), () => apply(0)));
         }
         if (column is not WorkGiverColumnDef || !WorkCatalog.Standalone(((WorkGiverColumnDef)column).Giver))

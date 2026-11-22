@@ -219,6 +219,20 @@ Equal("Existing pawn reactivation retains vanilla 3", 3, PriorityRules.InitialAs
 Equal("Existing pawn retains priority 1", 1, PriorityRules.InitialAssignment(1, 4, false, 2));
 Equal("Default cannot exceed configured maximum", 4, PriorityRules.InitialAssignment(3, 4, true, 9));
 Equal("Reactivation at maximum 1 stays within cap", 1, PriorityRules.InitialAssignment(3, 1, false, 3));
+int groupDefault = PriorityRules.GroupClick(1, false, true, true, 9, 5);
+Equal("Mixed group left click adopts configured default 5", 5, groupDefault);
+Equal("Mixed group right click also adopts configured default 5", 5, PriorityRules.GroupClick(3, false, false, true, 9, 5));
+Equal("Next group left click cycles down from default", 4, PriorityRules.GroupClick(groupDefault, true, true, true, 9, 5));
+Equal("Next group right click cycles up from default", 6, PriorityRules.GroupClick(groupDefault, true, false, true, 9, 5));
+Equal("Uniform disabled group keeps numeric left cycle", 9, PriorityRules.GroupClick(0, true, true, true, 9, 5));
+Equal("Uniform disabled group keeps numeric right cycle", 1, PriorityRules.GroupClick(0, true, false, true, 9, 5));
+Equal("Uniform maximum group can still cycle off", 0, PriorityRules.GroupClick(9, true, false, true, 9, 5));
+Equal("Mixed group default respects configured cap", 4, PriorityRules.GroupClick(1, false, true, true, 4, 5));
+Equal("Simple mode group activation stores configured default", 5, PriorityRules.GroupClick(0, true, true, false, 9, 5));
+Equal("Simple mode mixed group uses configured default", 5, PriorityRules.GroupClick(3, false, false, false, 9, 5));
+Equal("Simple mode uniform enabled group still turns off", 0, PriorityRules.GroupClick(3, true, true, false, 9, 5));
+Equal("Default 3 retains previous mixed-group behavior", 3, PriorityRules.GroupClick(1, false, true, true, 9, 3));
+
 void CheckViewport(string label, float contentWidth, float contentHeight, bool horizontal, bool vertical)
 {
     ScrollViewport viewport = ScrollViewport.Calculate(contentWidth, contentHeight, 1000f, 400f, 16f, 16f);

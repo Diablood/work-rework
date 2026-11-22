@@ -14,6 +14,8 @@ Work Rework reprend les catégories vanilla dans un onglet Travail plus précis 
 
 Le parent résume ses enfants par le plus petit chiffre non nul ; * indique des différences. Modifier le parent applique la valeur à tous ses enfants rattachés et efface leurs exceptions. Un parent désactivé bloque ces enfants. Attribuer directement une priorité positive à un enfant réactive uniquement cette sous-tâche ; les autres enfants rattachés restent désactivés. Une tâche autonome reste indépendante.
 
+Avec Grouped Pawns Lists, si les priorités du groupe sont différentes, le premier clic gauche/droit les uniformise au défaut configuré pour les colons modifiables. Les clics suivants font défiler la valeur commune normalement. L'activation d'un groupe en mode oui/non utilise aussi ce défaut.
+
 ## Organisation
 
 Liste de gauche : colonnes principales. Liste de droite : enfants du groupe sélectionné. Glisser une poignée ≡ dans sa liste, ou utiliser Monter / Descendre.

@@ -24,6 +24,13 @@ internal static class PriorityRules
         return (Limit(value, maximum) + (decrease ? maximum : 1)) % (maximum + 1);
     }
 
+    internal static int GroupClick(int value, bool uniform, bool decrease, bool manual, int maximum, int defaultPriority)
+    {
+        if (manual && uniform) return Cycle(value, decrease, maximum);
+        if (!manual && uniform && value > 0) return 0;
+        return Math.Clamp(defaultPriority, 1, Math.Clamp(maximum, 1, Maximum));
+    }
+
     internal static int Compare(int priorityA, int naturalA, int typeA, int giverA, int priorityB, int naturalB, int typeB, int giverB)
     {
         int result = priorityA.CompareTo(priorityB);

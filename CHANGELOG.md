@@ -1,5 +1,12 @@
 # Historique
 
+## Correctif local en validation — valeur initiale des commandes de groupe
+
+- Avec Grouped Pawns Lists, le premier clic gauche/droit sur un groupe aux priorités différentes utilise le défaut configuré (par exemple 5), au lieu de 3.
+- En mode oui/non, l'activation collective et son menu utilisent également ce défaut. Une valeur déjà commune conserve son cycle normal ; le plafond et les incapacités restent respectés.
+- Aide FR/EN précisée. Candidat local 1.0.2 conservé ; aucun changement de tag ni transfert Workshop.
+
+
 ## 1.0.2 — priorités initiales et activation des sous-tâches
 
 - La priorité par défaut configurée est conservée lors du lancement d'une nouvelle partie, y compris après la redistribution native des tâches avant génération de la carte.

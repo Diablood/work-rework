@@ -26,6 +26,8 @@ Take control of the Work tab: expand vanilla categories, set individual subtask 
 
 Editing a parent applies its value to all attached children and clears their overrides. Disabling the parent blocks those children. Assigning a positive priority directly to an attached child reactivates that child only; its attached siblings remain disabled. A standalone task stays independent of its original category.
 
+For a Grouped Pawns Lists group with different priorities, the first left/right click applies the configured default priority to its editable members. Subsequent clicks cycle the shared value normally. Group activation in checkbox mode also uses this default.
+
 Numeric priority comes before layout order. For ordinary work selection, main order then child order break equal-priority ties; native emergency passes and forced orders retain their rules.
 
 ## Installation
