@@ -1,12 +1,8 @@
-Work Rework 1.0.2 — initial priorities and direct subtask activation.
+Work Rework 1.0.3 — default priority for group commands.
 
-- The configured default priority is now correctly applied to starting colonists when creating a new game, instead of being reset to 3.
-- The setting also applies when recruiting a prisoner as a colonist or enslaving them, when the game initializes their new work assignments.
-- You can now activate a subtask directly while its parent category is disabled, without enabling the entire category first. Only the selected subtask becomes active; the others stay disabled.
-- This works with clicks, the priority menu and Grouped Pawns Lists group controls.
-- Parent summaries, standalone tasks, incapacities and work restrictions are preserved.
+- With Grouped Pawns Lists, the first click on a group cell with mixed priorities now uses the configured default (for example 5), instead of 3.
+- Collective activation in checkbox mode and its menu also use this default. The value is retained when switching back to numeric priorities.
+- Subsequent clicks on a shared value keep their usual cycle. The configured maximum and pawn incapacities remain respected.
 - Clarified the English and French help text.
 
-Existing assignments in your saves are preserved. The configured default applies to new initialization events; it does not retroactively replace the values of pawns already present.
-
-RimWorld 1.7. Harmony required. Grouped Pawns Lists remains optional.
+Existing assignments are not changed automatically. RimWorld 1.7; Harmony required. Grouped Pawns Lists remains optional.

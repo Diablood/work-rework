@@ -1,0 +1,12 @@
+Work Rework 1.0.2 — priorités initiales et activation des sous-tâches.
+
+- La priorité par défaut configurée est désormais correctement appliquée aux colons de départ lors de la création d'une nouvelle partie, au lieu d'être remplacée par 3.
+- Ce réglage s'applique aussi lors du recrutement d'un prisonnier comme colon ou de son asservissement, quand le jeu initialise ses nouvelles affectations.
+- Il est maintenant possible d'activer directement une sous-tâche lorsque son métier parent est désactivé, sans devoir d'abord activer toute la catégorie. Seule la sous-tâche choisie devient active ; les autres restent désactivées.
+- Ce comportement fonctionne avec les clics, le menu de priorité et les commandes de groupe de Grouped Pawns Lists.
+- Le résumé du parent, les tâches autonomes, les incapacités et les interdictions de travail restent respectés.
+- Aide française et anglaise précisée.
+
+Les priorités déjà définies dans vos parties sont conservées. Le défaut configuré s'applique aux nouvelles initialisations ; il ne remplace pas rétroactivement les valeurs des pions déjà présents.
+
+RimWorld 1.7. Harmony requis. Grouped Pawns Lists reste optionnel.

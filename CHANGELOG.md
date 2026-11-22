@@ -1,10 +1,10 @@
 # Historique
 
-## Correctif local en validation — valeur initiale des commandes de groupe
+## 1.0.3 — valeur initiale des commandes de groupe
 
 - Avec Grouped Pawns Lists, le premier clic gauche/droit sur un groupe aux priorités différentes utilise le défaut configuré (par exemple 5), au lieu de 3.
 - En mode oui/non, l'activation collective et son menu utilisent également ce défaut. Une valeur déjà commune conserve son cycle normal ; le plafond et les incapacités restent respectés.
-- Aide FR/EN précisée. Candidat local 1.0.2 conservé ; aucun changement de tag ni transfert Workshop.
+- Aide FR/EN précisée. Correctif accepté par le retour utilisateur global Tests OK. Version et tag 1.0.3 préparés ; mise à jour Workshop à effectuer par le créateur.
 
 
 ## 1.0.2 — priorités initiales et activation des sous-tâches

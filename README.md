@@ -2,7 +2,7 @@
 
 ![Work Rework](About/Preview.png)
 
-**RimWorld 1.7 · Version 1.0.2 · Harmony required · English / Français**
+**RimWorld 1.7 · Version 1.0.3 · Harmony required · English / Français**
 
 Take control of the Work tab: expand vanilla categories, set individual subtask priorities, reorder work and turn a task into a standalone column.
 
@@ -58,7 +58,7 @@ The development checkout includes build instructions, validation records and Wor
 
 The complete feature set was accepted by the user through version 0.6.2. Version **1.0.0** is the first complete release, prepared from that baseline. Its Workshop item has been created and is currently private.
 
-Version **1.0.1** fixed missing category and subtask names in the organization editor and Work tab tooltips. Version **1.0.2** fixes the configured default priority for starting colonists and incoming recruits/slaves, and lets you activate one subtask directly under a disabled category. The fixes were user-tested locally; the Workshop update is prepared for the creator to upload.
+Version **1.0.1** fixed missing work labels. Version **1.0.2** fixed default priorities for starting colonists and incoming recruits/slaves, and direct subtask activation under disabled categories. Version **1.0.3** uses the configured default for mixed Grouped Pawns Lists commands and collective checkbox activation. The latest fix was user-tested locally; its Workshop update is prepared for the creator to upload.
 
 Source, scripts and documentation use the existing MIT license. Visual assets are separate: see [LICENSING.md](LICENSING.md). The cover is AI-generated promotional artwork, not an in-game screenshot. The creator-provided mod icon is preserved.
 
